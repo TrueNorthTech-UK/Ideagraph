@@ -44,3 +44,16 @@ next-env.d.ts
 !.dev.vars.example
 .env*
 !.env.example
+
+# Google OAuth credentials (IMPORTANT - DO NOT COMMIT!)
+client_secret_*.json
+google_credentials*.json
+service-account*.json
+
+# Other sensitive files
+*.key
+*.pem
+*.p12
+*.pfx
+secrets.json
+credentials.json

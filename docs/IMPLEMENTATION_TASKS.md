@@ -1079,7 +1079,174 @@ Ensure dashboard pages and API routes require authentication and redirect unauth
 
 ---
 
-[... Additional tasks 031-050 for Phase 1 will continue in the next batch ...]
+### Task 031: Selection and Multi-Select on Canvas
+**Phase:** Foundation
+**Estimated Time:** 4 hours
+**Priority:** Medium
+**Dependencies:** [010]
+
+**Objective:**
+Enable click selection, shift-click multi-select, and marquee selection for nodes/edges.
+
+**Technical Requirements:**
+- React Flow selection API
+
+**Implementation Steps:**
+1. Configure selection options in `DiagramCanvas`.
+2. Add UI outline for selected items.
+
+**Files to Create/Modify:**
+- `src/components/diagram/DiagramCanvas.tsx`
+
+**Acceptance Criteria:**
+- [ ] Single and multi-select work
+- [ ] Selected styles visible
+
+**Testing Strategy:**
+- Manual selection scenarios
+
+**Potential Challenges:**
+- Prevent accidental drags
+
+**Reference Documentation:**
+- React Flow selection
+
+---
+
+### Task 032: Drag-and-Drop from Sidebar Palette
+**Phase:** Foundation
+**Estimated Time:** 6 hours
+**Priority:** Medium
+**Dependencies:** [011-013,015]
+
+**Objective:**
+Add a sidebar palette and allow dragging node types onto the canvas.
+
+**Technical Requirements:**
+- DnD between sidebar and canvas
+
+**Implementation Steps:**
+1. Create `components/diagram/Sidebar.tsx` with node items.
+2. Implement onDrop handler in `DiagramCanvas` to create nodes.
+
+**Files to Create/Modify:**
+- `src/components/diagram/Sidebar.tsx`
+- `src/components/diagram/DiagramCanvas.tsx`
+
+**Acceptance Criteria:**
+- [ ] Dragging creates a node at drop position
+
+**Testing Strategy:**
+- Manual drag tests
+
+**Potential Challenges:**
+- Correct position mapping
+
+**Reference Documentation:**
+- PRD Sidebar in editor
+
+---
+
+### Task 033: Node Properties Panel (Right Sidebar)
+**Phase:** Foundation
+**Estimated Time:** 6 hours
+**Priority:** High
+**Dependencies:** [010,031]
+
+**Objective:**
+Display and edit properties for selected node including label, description, metadata.
+
+**Technical Requirements:**
+- Controlled forms synced to store
+
+**Implementation Steps:**
+1. Create `NodePropertiesPanel` component.
+2. Bind to selected node(s); update store and persist.
+
+**Files to Create/Modify:**
+- `src/components/diagram/NodePropertiesPanel.tsx`
+- `src/components/diagram/DiagramCanvas.tsx`
+
+**Acceptance Criteria:**
+- [ ] Editing fields updates node and persists
+
+**Testing Strategy:**
+- Manual edit/persist
+
+**Potential Challenges:**
+- Handling multi-select edits
+
+**Reference Documentation:**
+- PRD Properties panel
+
+---
+
+### Task 034: Group/Container Node Type
+**Phase:** Foundation
+**Estimated Time:** 6 hours
+**Priority:** High
+**Dependencies:** [011,013]
+
+**Objective:**
+Add group/container nodes to visually organize children with optional collapse.
+
+**Technical Requirements:**
+- Parent/child relationships and extent
+
+**Implementation Steps:**
+1. Implement `components/diagram/nodes/GroupNode.tsx`.
+2. Support `parentNode` and `extent='parent'` in nodes.
+
+**Files to Create/Modify:**
+- `src/components/diagram/nodes/GroupNode.tsx`
+- `src/lib/diagram/types.ts`
+
+**Acceptance Criteria:**
+- [ ] Nodes can be nested and constrained within group
+
+**Testing Strategy:**
+- Manual nesting
+
+**Potential Challenges:**
+- Z-index and selection behavior
+
+**Reference Documentation:**
+- PRD Group/Container Implementation
+
+---
+
+### Task 035: Collapsible Groups and Badges
+**Phase:** Foundation
+**Estimated Time:** 4 hours
+**Priority:** Medium
+**Dependencies:** [034]
+
+**Objective:**
+Allow groups to collapse/expand and show badges (e.g., child count).
+
+**Technical Requirements:**
+- Internal collapse state with visual toggle
+
+**Implementation Steps:**
+1. Add collapse control to `GroupNode`.
+2. Render badges for group type and counts.
+
+**Files to Create/Modify:**
+- `src/components/diagram/nodes/GroupNode.tsx`
+
+**Acceptance Criteria:**
+- [ ] Collapsing hides contents visually
+
+**Testing Strategy:**
+- Manual toggle
+
+**Potential Challenges:**
+- Layout shifts on collapse
+
+**Reference Documentation:**
+- PRD Group node sample
+
+---
 
 ## Phase 2: Core Features (Weeks 4-6)
 ### Tasks 051-120
