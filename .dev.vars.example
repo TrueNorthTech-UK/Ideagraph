@@ -1,0 +1,22 @@
+# Load .env.development* files when running `wrangler dev`
+NEXTJS_ENV=development
+
+# Cloudflare Account ID
+CLOUDFLARE_ACCOUNT_ID=your-cloudflare-account-id
+
+# Cloudflare API Token (use your existing token!)
+CLOUDFLARE_D1_TOKEN=your-cloudflare-d1-token
+CLOUDFLARE_API_TOKEN=your-cloudflare-api-token
+
+# R2 Configuration
+CLOUDFLARE_R2_URL=https://your-account-id.r2.cloudflarestorage.com/ideagraph-media
+CLOUDFLARE_R2_BUCKET=ideagraph-media
+
+# Authentication - GENERATE THESE
+BETTER_AUTH_SECRET=your-better-auth-secret-key
+BETTER_AUTH_URL=https://your-app.workers.dev
+
+# Google Auth - GET FROM GOOGLE CLOUD CONSOLE
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+GOOGLE_REDIRECT_URI=https://your-app.workers.dev/auth/callback
