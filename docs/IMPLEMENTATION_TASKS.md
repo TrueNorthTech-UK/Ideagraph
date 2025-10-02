@@ -5094,17 +5094,4101 @@ Implement robust autosave with debounced commits, offline buffer, and recovery a
 **Reference Documentation:**
 - PRD "Persistence and Recovery"
 
+---
+
+### Task 136: Advanced Diagram Analytics and Insights
+**Phase:** Advanced Features
+**Estimated Time:** 6 hours
+**Priority:** Medium
+**Dependencies:** [080,095,118]
+
+**Objective:**
+Implement comprehensive analytics system for diagram usage patterns, complexity metrics, and user behavior insights.
+
+**Technical Requirements:**
+- Analytics data collection
+- Metrics calculation engine
+- Dashboard visualization
+
+**Implementation Steps:**
+1. Create analytics data models and collection hooks.
+2. Implement metrics calculation for diagram complexity, usage patterns.
+3. Build analytics dashboard with charts and insights.
+
+**Files to Create/Modify:**
+- `src/lib/analytics/collector.ts`
+- `src/lib/analytics/metrics.ts`
+- `src/modules/analytics/dashboard.page.tsx`
+
+**Acceptance Criteria:**
+- [ ] Analytics data is collected automatically
+- [ ] Dashboard shows meaningful insights
+
+**Testing Strategy:**
+- Unit tests for metrics calculations
+
+**Potential Challenges:**
+- Privacy considerations for data collection
+
+**Reference Documentation:**
+- PRD "Analytics and Insights"
+
+---
+
+### Task 137: Advanced Collaboration Notifications
+**Phase:** Advanced Features
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [105,087]
+
+**Objective:**
+Implement intelligent notification system for collaboration events including mentions, changes, and conflicts.
+
+**Technical Requirements:**
+- Real-time notification delivery
+- Notification preferences
+- Email/webhook integrations
+
+**Implementation Steps:**
+1. Create notification service with Durable Objects.
+2. Implement notification preferences and filtering.
+3. Add email and webhook notification channels.
+
+**Files to Create/Modify:**
+- `src/lib/notifications/service.ts`
+- `src/lib/notifications/channels.ts`
+- `src/modules/notifications/preferences.tsx`
+
+**Acceptance Criteria:**
+- [ ] Users receive relevant notifications
+- [ ] Notification preferences work correctly
+
+**Testing Strategy:**
+- Integration tests for notification delivery
+
+**Potential Challenges:**
+- Notification spam prevention
+
+**Reference Documentation:**
+- PRD "Real-time Collaboration"
+
+---
+
+### Task 138: Advanced Diagram Security and Audit
+**Phase:** Advanced Features
+**Estimated Time:** 7 hours
+**Priority:** High
+**Dependencies:** [099,112]
+
+**Objective:**
+Implement comprehensive security features including audit logging, access controls, and data encryption.
+
+**Technical Requirements:**
+- Audit logging system
+- Role-based access control
+- Data encryption at rest
+
+**Implementation Steps:**
+1. Create audit logging for all diagram operations.
+2. Implement RBAC for diagram access and editing.
+3. Add encryption for sensitive diagram data.
+
+**Files to Create/Modify:**
+- `src/lib/security/audit.ts`
+- `src/lib/security/rbac.ts`
+- `src/lib/security/encryption.ts`
+
+**Acceptance Criteria:**
+- [ ] All operations are audited
+- [ ] Access controls work correctly
+- [ ] Sensitive data is encrypted
+
+**Testing Strategy:**
+- Security testing for access controls
+
+**Potential Challenges:**
+- Performance impact of encryption
+
+**Reference Documentation:**
+- PRD "Security Considerations"
+
+---
+
+### Task 139: Advanced Performance Optimization
+**Phase:** Advanced Features
+**Estimated Time:** 8 hours
+**Priority:** High
+**Dependencies:** [103,093,127]
+
+**Objective:**
+Implement advanced performance optimizations including virtual scrolling, lazy loading, and intelligent caching.
+
+**Technical Requirements:**
+- Virtual scrolling for large diagrams
+- Lazy loading of components
+- Intelligent caching strategies
+
+**Implementation Steps:**
+1. Implement virtual scrolling for canvas with many nodes.
+2. Add lazy loading for diagram components and assets.
+3. Create intelligent caching for frequently accessed data.
+
+**Files to Create/Modify:**
+- `src/lib/performance/virtual-scroll.ts`
+- `src/lib/performance/lazy-loading.ts`
+- `src/lib/performance/cache.ts`
+
+**Acceptance Criteria:**
+- [ ] Large diagrams render smoothly
+- [ ] Loading times are optimized
+- [ ] Memory usage is controlled
+
+**Testing Strategy:**
+- Performance benchmarks with large datasets
+
+**Potential Challenges:**
+- Complex state management with virtual scrolling
+
+**Reference Documentation:**
+- PRD "Performance Requirements"
+
+---
+
+### Task 140: Advanced Error Recovery and Resilience
+**Phase:** Advanced Features
+**Estimated Time:** 6 hours
+**Priority:** High
+**Dependencies:** [102,067]
+
+**Objective:**
+Implement comprehensive error recovery system with automatic retry, graceful degradation, and user-friendly error messages.
+
+**Technical Requirements:**
+- Automatic retry mechanisms
+- Graceful degradation strategies
+- User-friendly error handling
+
+**Implementation Steps:**
+1. Create retry mechanisms for failed operations.
+2. Implement graceful degradation for non-critical features.
+3. Improve error messages and recovery suggestions.
+
+**Files to Create/Modify:**
+- `src/lib/error/recovery.ts`
+- `src/lib/error/retry.ts`
+- `src/components/error-boundary-enhanced.tsx`
+
+**Acceptance Criteria:**
+- [ ] Errors are handled gracefully
+- [ ] Users can recover from failures
+- [ ] System remains functional during issues
+
+**Testing Strategy:**
+- Chaos engineering tests
+
+**Potential Challenges:**
+- Balancing retry attempts with user experience
+
+**Reference Documentation:**
+- PRD "Error Handling Strategy"
+
+---
+
+### Task 141: Advanced Integration Testing Framework
+**Phase:** Advanced Features
+**Estimated Time:** 7 hours
+**Priority:** High
+**Dependencies:** [111,120]
+
+**Objective:**
+Create comprehensive integration testing framework covering all system components and user workflows.
+
+**Technical Requirements:**
+- End-to-end test automation
+- API integration testing
+- Performance testing integration
+
+**Implementation Steps:**
+1. Set up comprehensive E2E testing with Playwright.
+2. Create API integration test suite.
+3. Integrate performance testing into CI/CD.
+
+**Files to Create/Modify:**
+- `tests/e2e/framework.ts`
+- `tests/integration/api.test.ts`
+- `tests/performance/benchmarks.test.ts`
+
+**Acceptance Criteria:**
+- [ ] All critical paths are tested
+- [ ] Tests run reliably in CI
+- [ ] Performance regressions are caught
+
+**Testing Strategy:**
+- Automated test execution in CI/CD
+
+**Potential Challenges:**
+- Test reliability and maintenance
+
+**Reference Documentation:**
+- PRD "Testing Strategy"
+
+---
+
+### Task 142: Advanced User Onboarding and Help System
+**Phase:** Advanced Features
+**Estimated Time:** 6 hours
+**Priority:** Medium
+**Dependencies:** [114,069]
+
+**Objective:**
+Create comprehensive onboarding experience with interactive tutorials, contextual help, and progressive disclosure.
+
+**Technical Requirements:**
+- Interactive tutorial system
+- Contextual help tooltips
+- Progressive feature disclosure
+
+**Implementation Steps:**
+1. Build interactive tutorial system with guided tours.
+2. Implement contextual help with tooltips and documentation.
+3. Create progressive disclosure for advanced features.
+
+**Files to Create/Modify:**
+- `src/lib/onboarding/tutorial.ts`
+- `src/lib/onboarding/help.ts`
+- `src/components/onboarding/guided-tour.tsx`
+
+**Acceptance Criteria:**
+- [ ] New users can complete onboarding
+- [ ] Help is contextually relevant
+- [ ] Advanced features are discoverable
+
+**Testing Strategy:**
+- User testing for onboarding flow
+
+**Potential Challenges:**
+- Balancing simplicity with feature discovery
+
+**Reference Documentation:**
+- PRD "User Experience"
+
+---
+
+### Task 143: Advanced Diagram Validation Rules Engine
+**Phase:** Advanced Features
+**Estimated Time:** 6 hours
+**Priority:** High
+**Dependencies:** [106,088,126]
+
+**Objective:**
+Create flexible validation rules engine allowing custom validation rules, rule composition, and domain-specific validations.
+
+**Technical Requirements:**
+- Rule engine architecture
+- Custom rule definition
+- Rule composition and chaining
+
+**Implementation Steps:**
+1. Design rule engine with pluggable validators.
+2. Create rule definition language and UI.
+3. Implement rule composition and execution engine.
+
+**Files to Create/Modify:**
+- `src/lib/validation/rule-engine.ts`
+- `src/lib/validation/rule-definition.ts`
+- `src/modules/validation/rule-builder.tsx`
+
+**Acceptance Criteria:**
+- [ ] Custom rules can be defined
+- [ ] Rules compose correctly
+- [ ] Validation is performant
+
+**Testing Strategy:**
+- Unit tests for rule engine
+
+**Potential Challenges:**
+- Rule complexity and performance
+
+**Reference Documentation:**
+- PRD "Diagram Validation"
+
+---
+
+### Task 144: Advanced Export Quality Control
+**Phase:** Advanced Features
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [110,124,131]
+
+**Objective:**
+Implement quality control system for exports including validation, formatting checks, and automated quality scoring.
+
+**Technical Requirements:**
+- Export validation pipeline
+- Quality scoring algorithms
+- Automated formatting checks
+
+**Implementation Steps:**
+1. Create export validation pipeline.
+2. Implement quality scoring for different export formats.
+3. Add automated formatting and consistency checks.
+
+**Files to Create/Modify:**
+- `src/lib/export/quality-control.ts`
+- `src/lib/export/validation.ts`
+- `src/lib/export/scoring.ts`
+
+**Acceptance Criteria:**
+- [ ] Exports pass quality checks
+- [ ] Quality scores are meaningful
+- [ ] Formatting is consistent
+
+**Testing Strategy:**
+- Automated quality testing
+
+**Potential Challenges:**
+- Defining meaningful quality metrics
+
+**Reference Documentation:**
+- PRD "Export System"
+
+---
+
+### Task 145: Advanced Collaboration Scalability
+**Phase:** Advanced Features
+**Estimated Time:** 8 hours
+**Priority:** High
+**Dependencies:** [119,132,123]
+
+**Objective:**
+Optimize collaboration system for large-scale usage with advanced sharding, load balancing, and resource management.
+
+**Technical Requirements:**
+- Advanced sharding strategies
+- Load balancing for Durable Objects
+- Resource usage optimization
+
+**Implementation Steps:**
+1. Implement advanced sharding for collaboration sessions.
+2. Add load balancing and failover mechanisms.
+3. Optimize resource usage and cleanup.
+
+**Files to Create/Modify:**
+- `src/lib/collaboration/sharding.ts`
+- `src/lib/collaboration/load-balancer.ts`
+- `src/lib/collaboration/resource-manager.ts`
+
+**Acceptance Criteria:**
+- [ ] System handles 100+ concurrent users
+- [ ] Load is distributed efficiently
+- [ ] Resources are managed properly
+
+**Testing Strategy:**
+- Load testing with high concurrency
+
+**Potential Challenges:**
+- Complex state synchronization at scale
+
+**Reference Documentation:**
+- PRD "Real-time Collaboration"
+
+---
+
+### Task 146: Advanced Auto-Layout Heuristics and User Overrides
+**Phase:** Advanced Features
+**Estimated Time:** 7 hours
+**Priority:** Medium
+**Dependencies:** [078,122]
+
+**Objective:**
+Enhance auto-layout with heuristics for clustering by domain, minimizing edge crossings, and providing per-node overrides.
+
+**Technical Requirements:**
+- Clustering and ranking heuristics
+- Per-node pin/weight overrides
+
+**Implementation Steps:**
+1. Add clustering by node type/domain.
+2. Implement crossing-minimization pass.
+3. Support per-node pins and weights.
+
+**Files to Create/Modify:**
+- `src/lib/diagram/layout/heuristics.ts`
+- `src/modules/diagram/components/layout-controls.tsx`
+
+**Acceptance Criteria:**
+- [ ] Layout reduces crossings on complex graphs
+- [ ] Overrides affect placement predictably
+
+**Testing Strategy:**
+- Visual snapshots on sample graphs
+
+**Potential Challenges:**
+- Trade-offs between optimality and speed
+
+**Reference Documentation:**
+- PRD "Auto-Layout"
+
+---
+
+### Task 147: Offline-First Collaboration Queue
+**Phase:** Advanced Features
+**Estimated Time:** 6 hours
+**Priority:** High
+**Dependencies:** [071,072,135]
+
+**Objective:**
+Queue collaboration ops while offline and reconcile on reconnect with conflict-aware merge.
+
+**Technical Requirements:**
+- IndexedDB operation queue
+- Conflict-aware reconciliation
+
+**Implementation Steps:**
+1. Buffer ops while offline.
+2. On reconnect, diff/merge with server state.
+3. Resolve conflicts using OT/CRDT strategy.
+
+**Files to Create/Modify:**
+- `src/lib/collaboration/offline-queue.ts`
+- `src/modules/diagram/hooks/use-offline-collab.ts`
+
+**Acceptance Criteria:**
+- [ ] Edits made offline sync cleanly
+- [ ] Conflicts resolved deterministically
+
+**Testing Strategy:**
+- Simulated offline sessions
+
+**Potential Challenges:**
+- Edge cases with long offline periods
+
+**Reference Documentation:**
+- PRD "Realtime + Offline"
+
+---
+
+### Task 148: AI Plan-to-Canvas Command Execution
+**Phase:** Advanced Features
+**Estimated Time:** 7 hours
+**Priority:** High
+**Dependencies:** [076,121]
+
+**Objective:**
+Translate AI-generated plans into deterministic canvas commands with audit trail.
+
+**Technical Requirements:**
+- Command schema and executor
+- Audit log of commands
+
+**Implementation Steps:**
+1. Define command schema for node/edge operations.
+2. Implement executor with validation and rollback.
+3. Log all commands for traceability.
+
+**Files to Create/Modify:**
+- `src/lib/ai/commands/schema.ts`
+- `src/lib/ai/commands/execute.ts`
+- `src/lib/ai/commands/audit.ts`
+
+**Acceptance Criteria:**
+- [ ] Plans apply reproducibly to canvas
+- [ ] Audit trail captures commands
+
+**Testing Strategy:**
+- Unit tests for executor and rollback
+
+**Potential Challenges:**
+- Mapping ambiguous plans to concrete ops
+
+**Reference Documentation:**
+- PRD "AI Agent System"
+
+---
+
+### Task 149: Diagram Milestones and Releases
+**Phase:** Advanced Features
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [077,065]
+
+**Objective:**
+Allow creating named milestones/releases from versions with notes and export bundles.
+
+**Technical Requirements:**
+- Milestone metadata model
+- Bundled export generation
+
+**Implementation Steps:**
+1. Add milestone creation from version.
+2. Attach notes and tags.
+3. Generate export bundle (MD/JSON/PNG).
+
+**Files to Create/Modify:**
+- `src/lib/versioning/milestones.ts`
+- `src/modules/diagram/components/milestone-panel.tsx`
+
+**Acceptance Criteria:**
+- [ ] Milestones capture state and notes
+- [ ] Bundles download correctly
+
+**Testing Strategy:**
+- Manual milestone creation and export
+
+**Potential Challenges:**
+- Storage limits for bundles
+
+**Reference Documentation:**
+- PRD "Versioning"
+
+---
+
+### Task 150: Template Marketplace (Private)
+**Phase:** Advanced Features
+**Estimated Time:** 6 hours
+**Priority:** Medium
+**Dependencies:** [091,133]
+
+**Objective:**
+Provide internal marketplace UI for curated templates and presets, with governance checks.
+
+**Technical Requirements:**
+- Private catalog with signatures
+- Governance validations in CI
+
+**Implementation Steps:**
+1. Build catalog UI with search/filter.
+2. Enforce signature and schema checks.
+3. Install template/preset into project.
+
+**Files to Create/Modify:**
+- `src/modules/templates/marketplace.page.tsx`
+- `src/lib/templates/catalog.ts`
+
+**Acceptance Criteria:**
+- [ ] Templates installable from catalog
+- [ ] Invalid items blocked by governance
+
+**Testing Strategy:**
+- Schema and signature tests
+
+**Potential Challenges:**
+- Keeping catalog consistent across environments
+
+**Reference Documentation:**
+- PRD "Templates and Presets"
+
+---
+
+### Task 151: AI Recommendation Feedback Loop
+**Phase:** Advanced Features
+**Estimated Time:** 6 hours
+**Priority:** Medium
+**Dependencies:** [125,061]
+
+**Objective:**
+Collect user feedback on AI suggestions to improve future recommendations.
+
+**Technical Requirements:**
+- Feedback capture and scoring
+- Model prompt adjustments
+
+**Implementation Steps:**
+1. Add like/accept/reject feedback UI.
+2. Store feedback linked to context.
+3. Adjust prompts using feedback signals.
+
+**Files to Create/Modify:**
+- `src/modules/ai/components/feedback.tsx`
+- `src/lib/ai/feedback.ts`
+
+**Acceptance Criteria:**
+- [ ] Feedback influences subsequent suggestions
+- [ ] Feedback is auditable
+
+**Testing Strategy:**
+- A/B test prompt tweaks
+
+**Potential Challenges:**
+- Avoiding bias and feedback loops
+
+**Reference Documentation:**
+- PRD "AI UX"
+
+---
+
+### Task 152: Large Graph Pagination and Windowing
+**Phase:** Advanced Features
+**Estimated Time:** 7 hours
+**Priority:** High
+**Dependencies:** [139,127]
+
+**Objective:**
+Render and interact with extremely large graphs via windowing and progressive hydration.
+
+**Technical Requirements:**
+- Canvas windowing strategy
+- Progressive data fetching
+
+**Implementation Steps:**
+1. Implement node/edge windowing by viewport.
+2. Fetch detail data on demand.
+3. Maintain interaction fidelity under load.
+
+**Files to Create/Modify:**
+- `src/lib/diagram/windowing.ts`
+- `src/modules/diagram/components/windowed-canvas.tsx`
+
+**Acceptance Criteria:**
+- [ ] 10k+ elements remain usable
+- [ ] Interactions stay responsive
+
+**Testing Strategy:**
+- Synthetic large graph benchmarks
+
+**Potential Challenges:**
+- Hit-testing with partial data
+
+**Reference Documentation:**
+- PRD "Performance Requirements"
+
+---
+
+### Task 153: Secure Sharing Links with Expiry and Scopes
+**Phase:** Advanced Features
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [089,138]
+
+**Objective:**
+Generate signed share links with expiry and scoped permissions (view/comment).
+
+**Technical Requirements:**
+- Signed tokens with expiry
+- Scoped permissions enforcement
+
+**Implementation Steps:**
+1. Create signed URL generator.
+2. Enforce scopes via middleware.
+3. UI to manage and revoke links.
+
+**Files to Create/Modify:**
+- `src/lib/sharing/links.ts`
+- `src/app/api/sharing/route.ts`
+- `src/modules/sharing/manage.page.tsx`
+
+**Acceptance Criteria:**
+- [ ] Links expire and enforce scopes
+- [ ] Revocation works immediately
+
+**Testing Strategy:**
+- Link lifecycle tests
+
+**Potential Challenges:**
+- Clock skew and token replay
+
+**Reference Documentation:**
+- PRD "Sharing and Permissions"
+
+---
+
+### Task 154: Diagram Linting and Best Practices Hints
+**Phase:** Advanced Features
+**Estimated Time:** 6 hours
+**Priority:** Medium
+**Dependencies:** [126,143]
+
+**Objective:**
+Provide lint-style hints for anti-patterns (e.g., unbounded fan-in/out, missing retry, no cache in hot path).
+
+**Technical Requirements:**
+- Rule registry with severities
+- Quick fixes where applicable
+
+**Implementation Steps:**
+1. Define lint rules and severities.
+2. Implement analyzer over graph model.
+3. Surface hints with quick-fix actions.
+
+**Files to Create/Modify:**
+- `src/lib/diagram/lint/rules.ts`
+- `src/lib/diagram/lint/analyze.ts`
+- `src/modules/diagram/components/lint-panel.tsx`
+
+**Acceptance Criteria:**
+- [ ] Hints update as diagram changes
+- [ ] Quick fixes apply cleanly
+
+**Testing Strategy:**
+- Unit tests on rule fixtures
+
+**Potential Challenges:**
+- False positives vs useful signal
+
+**Reference Documentation:**
+- PRD "Diagram Validation"
+
+---
+
+### Task 155: Project/Workspace Settings and Policies
+**Phase:** Advanced Features
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [053,069]
+
+**Objective:**
+Centralize project/workspace settings: policies for exports, collaboration defaults, and security controls.
+
+**Technical Requirements:**
+- Settings model with scopes (user/project/workspace)
+- Policy enforcement hooks
+
+**Implementation Steps:**
+1. Create settings schema and storage.
+2. Build settings UI with scoped overrides.
+3. Enforce policies across modules.
+
+**Files to Create/Modify:**
+- `src/lib/settings/model.ts`
+- `src/modules/settings/settings.page.tsx`
+- `src/lib/settings/policy.ts`
+
+**Acceptance Criteria:**
+- [ ] Settings persist and apply by scope
+- [ ] Policies are enforced consistently
+
+**Testing Strategy:**
+- Integration tests across modules
+
+**Potential Challenges:**
+- Resolving conflicting scopes
+
+**Reference Documentation:**
+- PRD "Configuration and Policies"
+
+---
+
+### Task 156: Export to PDF/PNG Quality and Typography Polish
+**Phase:** Advanced Features
+**Estimated Time:** 6 hours
+**Priority:** Medium
+**Dependencies:** [074,075,144]
+
+**Objective:**
+Improve visual fidelity of PDF/PNG exports with font embedding, DPI controls, and background/bleed options.
+
+**Technical Requirements:**
+- Font embedding and fallback
+- DPI and scale controls
+- Transparent/white/brand backgrounds
+
+**Implementation Steps:**
+1. Add font embedding and fallback strategy.
+2. Implement DPI and scale options.
+3. Provide background and bleed settings UI.
+
+**Files to Create/Modify:**
+- `src/lib/export/image/renderer.ts`
+- `src/modules/export/components/image-options.tsx`
+
+**Acceptance Criteria:**
+- [ ] Exports are crisp and brand-consistent
+- [ ] Typography renders as designed
+
+**Testing Strategy:**
+- Visual checks across devices
+
+**Potential Challenges:**
+- Font licensing and embedding limits
+
+**Reference Documentation:**
+- PRD "Export System"
+
+---
+
+### Task 157: Diagram Metrics Web Vitals Dashboard
+**Phase:** Advanced Features
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [103,139]
+
+**Objective:**
+Expose a dashboard for diagram-related Web Vitals and interaction latency to guard regressions.
+
+**Technical Requirements:**
+- Web Vitals instrumentation
+- Client-to-worker reporting
+
+**Implementation Steps:**
+1. Instrument Web Vitals and interaction metrics.
+2. Report metrics to worker endpoint.
+3. Build dashboard with thresholds and trends.
+
+**Files to Create/Modify:**
+- `src/lib/metrics/web-vitals.ts`
+- `src/app/api/metrics/route.ts`
+- `src/modules/metrics/dashboard.page.tsx`
+
+**Acceptance Criteria:**
+- [ ] Metrics visible with trends
+- [ ] Threshold alerts configurable
+
+**Testing Strategy:**
+- Synthetic interaction tests
+
+**Potential Challenges:**
+- Noise reduction and sampling
+
+**Reference Documentation:**
+- PRD "Performance Monitoring"
+
+---
+
+### Task 158: AI Conversation Transcript Export
+**Phase:** Advanced Features
+**Estimated Time:** 4 hours
+**Priority:** Medium
+**Dependencies:** [055,058,065]
+
+**Objective:**
+Allow exporting AI chat transcripts with context references into MD/JSON alongside diagram exports.
+
+**Technical Requirements:**
+- Transcript serialization
+- Export bundling integration
+
+**Implementation Steps:**
+1. Serialize conversations with message metadata.
+2. Include transcript in export bundles.
+3. Add UI option to include/exclude transcripts.
+
+**Files to Create/Modify:**
+- `src/lib/export/bundle.ts`
+- `src/lib/chat/serialize.ts`
+- `src/modules/export/components/bundle-options.tsx`
+
+**Acceptance Criteria:**
+- [ ] Transcripts export with correct ordering
+- [ ] Bundles include optional transcripts
+
+**Testing Strategy:**
+- Snapshot tests on exports
+
+**Potential Challenges:**
+- PII redaction and privacy controls
+
+**Reference Documentation:**
+- PRD "Export System" / "Chat"
+
+---
+
+### Task 159: Editor Plugin System (Beta)
+**Phase:** Advanced Features
+**Estimated Time:** 7 hours
+**Priority:** Medium
+**Dependencies:** [011,012,063]
+
+**Objective:**
+Introduce a plugin API for extending editor functionality (tools, inspectors, commands) safely.
+
+**Technical Requirements:**
+- Capability-based API surface
+- Sandboxed execution boundaries
+
+**Implementation Steps:**
+1. Define plugin manifest and capabilities.
+2. Load/activate plugins with sandbox.
+3. Expose extension points (toolbar, context menu, inspector).
+
+**Files to Create/Modify:**
+- `src/lib/plugins/manifest.ts`
+- `src/lib/plugins/runtime.ts`
+- `src/modules/diagram/components/plugin-host.tsx`
+
+**Acceptance Criteria:**
+- [ ] Plugins can add tools safely
+- [ ] No access beyond declared capabilities
+
+**Testing Strategy:**
+- Example plugin e2e test
+
+**Potential Challenges:**
+- Security sandbox and performance
+
+**Reference Documentation:**
+- PRD "Extensibility"
+
+---
+
+### Task 160: Multi-Project Export Bundles
+**Phase:** Advanced Features
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [065,149]
+
+**Objective:**
+Allow bundling multiple diagrams/projects into a single export with index overview.
+
+**Technical Requirements:**
+- Multi-select and bundling
+- Index readme generation
+
+**Implementation Steps:**
+1. Multi-select projects/diagrams for export.
+2. Generate index with links and summaries.
+3. Package as downloadable archive.
+
+**Files to Create/Modify:**
+- `src/modules/export/components/multi-export.tsx`
+- `src/lib/export/bundle.ts`
+
+**Acceptance Criteria:**
+- [ ] Single archive contains selected items
+- [ ] Index overview links work
+
+**Testing Strategy:**
+- Manual multi-export checks
+
+**Potential Challenges:**
+- Large archive sizes and timeouts
+
+**Reference Documentation:**
+- PRD "Export System"
+
+---
+
+### Task 161: Advanced Edge Routing with Obstacles
+**Phase:** Advanced Features
+**Estimated Time:** 7 hours
+**Priority:** Medium
+**Dependencies:** [079,139]
+
+**Objective:**
+Improve edge routing to avoid node obstacles and reduce overlaps with smarter waypoints.
+
+**Technical Requirements:**
+- Obstacle-aware routing
+- Waypoint generation
+
+**Implementation Steps:**
+1. Add obstacle detection and pathfinding.
+2. Generate waypoints to avoid overlaps.
+3. Cache routes for performance.
+
+**Files to Create/Modify:**
+- `src/lib/diagram/routing/obstacle.ts`
+- `src/lib/diagram/routing/waypoints.ts`
+
+**Acceptance Criteria:**
+- [ ] Fewer overlaps on dense graphs
+- [ ] Routing maintains performance targets
+
+**Testing Strategy:**
+- Visual comparison benchmarks
+
+**Potential Challenges:**
+- Balancing quality vs speed
+
+**Reference Documentation:**
+- PRD "Edges and Routing"
+
+---
+
+### Task 162: Review Mode and Suggestions
+**Phase:** Advanced Features
+**Estimated Time:** 6 hours
+**Priority:** Medium
+**Dependencies:** [082,134]
+
+**Objective:**
+Introduce a non-destructive review mode where suggested changes can be proposed, commented, and applied.
+
+**Technical Requirements:**
+- Suggestion data model
+- Apply/merge suggestions
+
+**Implementation Steps:**
+1. Add suggestion model linked to diagrams.
+2. UI for proposing and discussing changes.
+3. Apply suggestions with diff/merge flow.
+
+**Files to Create/Modify:**
+- `src/lib/review/model.ts`
+- `src/modules/review/review.page.tsx`
+
+**Acceptance Criteria:**
+- [ ] Suggestions do not mutate base until applied
+- [ ] Comments and status tracking work
+
+**Testing Strategy:**
+- Integration tests around suggestion apply
+
+**Potential Challenges:**
+- Permissions and spam prevention
+
+**Reference Documentation:**
+- PRD "Collaboration and Review"
+
+---
+
+### Task 163: Workspace Audit Dashboard
+**Phase:** Advanced Features
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [138,153]
+
+**Objective:**
+Provide administrators with an audit dashboard for access, sharing links, and security posture.
+
+**Technical Requirements:**
+- Aggregated audit logs
+- Filters and export
+
+**Implementation Steps:**
+1. Aggregate audit events by project/workspace.
+2. Build filters and export to CSV/JSON.
+3. Surface security posture indicators.
+
+**Files to Create/Modify:**
+- `src/modules/admin/audit.page.tsx`
+- `src/lib/security/audit-query.ts`
+
+**Acceptance Criteria:**
+- [ ] Admins can review recent activity
+- [ ] Export works with filters
+
+**Testing Strategy:**
+- Manual admin walkthrough
+
+**Potential Challenges:**
+- Data retention and privacy
+
+**Reference Documentation:**
+- PRD "Security and Audit"
+
+---
+
+### Task 164: Advanced Keyboard Macro System
+**Phase:** Advanced Features
+**Estimated Time:** 6 hours
+**Priority:** Medium
+**Dependencies:** [047,066]
+
+**Objective:**
+Allow users to define keyboard macros for sequences of editor actions.
+
+**Technical Requirements:**
+- Macro recording and playback
+- Persistence per user/project
+
+**Implementation Steps:**
+1. Implement macro record/playback engine.
+2. Persist macros with scope.
+3. UI to manage and bind macros.
+
+**Files to Create/Modify:**
+- `src/lib/editor/macros.ts`
+- `src/modules/diagram/components/macro-manager.tsx`
+
+**Acceptance Criteria:**
+- [ ] Macros record/play reliably
+- [ ] Scoped persistence works
+
+**Testing Strategy:**
+- Interactive macro tests
+
+**Potential Challenges:**
+- Security of macro actions
+
+**Reference Documentation:**
+- PRD "Power User Features"
+
+---
+
+### Task 165: Export Accessibility Audit
+**Phase:** Advanced Features
+**Estimated Time:** 4 hours
+**Priority:** Medium
+**Dependencies:** [069,144,156]
+
+**Objective:**
+Ensure exports meet accessibility standards (contrast, alt text for images, semantic structure in MD/PDF).
+
+**Technical Requirements:**
+- Accessibility checks for exports
+- Automated contrast and semantics validation
+
+**Implementation Steps:**
+1. Validate MD headings and semantics.
+2. Ensure images include alt text and adequate contrast.
+3. Add accessibility report to export process.
+
+**Files to Create/Modify:**
+- `src/lib/export/a11y.ts`
+- `src/lib/export/quality-control.ts`
+
+**Acceptance Criteria:**
+- [ ] Exports pass a11y checks
+- [ ] Report surfaces any issues
+
+**Testing Strategy:**
+- Automated a11y tests in CI
+
+**Potential Challenges:**
+- Balancing strictness with flexibility
+
+**Reference Documentation:**
+- PRD "Accessibility"
+
+---
+
+### Task 166: Multi-Agent Conflict Explanation UI
+**Phase:** Advanced Features
+**Estimated Time:** 6 hours
+**Priority:** Medium
+**Dependencies:** [121,123,148]
+
+**Objective:**
+When agents disagree, present a concise explanation and allow the user to choose or blend outcomes.
+
+**Technical Requirements:**
+- Consensus metadata surface
+- Choice/blend UI
+
+**Implementation Steps:**
+1. Capture conflict metadata from coordination layer.
+2. Summarize disagreements with rationale.
+3. Apply chosen/blended outcome to canvas.
+
+**Files to Create/Modify:**
+- `src/modules/ai/components/conflict-explainer.tsx`
+- `src/lib/ai/consensus.ts`
+
+**Acceptance Criteria:**
+- [ ] Users can understand agent disagreements
+- [ ] Selection applies deterministically
+
+**Testing Strategy:**
+- Scenario tests with forced conflicts
+
+**Potential Challenges:**
+- UI clarity with complex diffs
+
+**Reference Documentation:**
+- PRD "Multi-Agent Architecture"
+
+---
+
+### Task 167: Data Residency and Region Selection
+**Phase:** Advanced Features
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [112,163]
+
+**Objective:**
+Allow workspaces to choose data regions and ensure storage/processing residency compliance.
+
+**Technical Requirements:**
+- Region-aware storage bindings
+- Residency policy enforcement
+
+**Implementation Steps:**
+1. Add region selection to workspace settings.
+2. Route storage and compute to selected region.
+3. Enforce residency in audit checks.
+
+**Files to Create/Modify:**
+- `src/modules/settings/settings.page.tsx`
+- `src/lib/infra/regions.ts`
+- `src/lib/security/audit.ts`
+
+**Acceptance Criteria:**
+- [ ] Data stays in selected region
+- [ ] Audit flags non-compliance
+
+**Testing Strategy:**
+- Region switching tests
+
+**Potential Challenges:**
+- Cross-region collaboration edge cases
+
+**Reference Documentation:**
+- PRD "Compliance"
+
+---
+
+### Task 168: Diagram Theming API
+**Phase:** Advanced Features
+**Estimated Time:** 6 hours
+**Priority:** Medium
+**Dependencies:** [026,069,131]
+
+**Objective:**
+Expose theming API to define color systems, typography scales, and component tokens for diagrams/exports.
+
+**Technical Requirements:**
+- Token-driven theming
+- Theme preview and validation
+
+**Implementation Steps:**
+1. Define theme schema and defaults.
+2. Build theme editor with live preview.
+3. Validate contrast and export readiness.
+
+**Files to Create/Modify:**
+- `src/lib/theme/schema.ts`
+- `src/modules/theme/theme-editor.page.tsx`
+
+**Acceptance Criteria:**
+- [ ] Themes apply across canvas and exports
+- [ ] Contrast passes accessibility thresholds
+
+**Testing Strategy:**
+- Visual regression for themes
+
+**Potential Challenges:**
+- Token propagation across components
+
+**Reference Documentation:**
+- PRD "Theming"
+
+---
+
+### Task 169: API Rate Plan and Usage Quotas
+**Phase:** Advanced Features
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [045,065]
+
+**Objective:**
+Introduce per-workspace API quotas and plan tiers controlling exports, AI calls, and collaboration limits.
+
+**Technical Requirements:**
+- Quota counters and resets
+- Plan configuration
+
+**Implementation Steps:**
+1. Define plans and limits.
+2. Track usage per workspace.
+3. Enforce and surface limits in UI.
+
+**Files to Create/Modify:**
+- `src/lib/billing/plans.ts`
+- `src/lib/billing/usage.ts`
+- `src/modules/billing/usage.page.tsx`
+
+**Acceptance Criteria:**
+- [ ] Limits enforced accurately
+- [ ] UI communicates remaining usage
+
+**Testing Strategy:**
+- Quota boundary tests
+
+**Potential Challenges:**
+- Avoiding overly aggressive throttling
+
+**Reference Documentation:**
+- PRD "Plans and Limits"
+
+---
+
+### Task 170: Import Connectors for External Tools (Beta)
+**Phase:** Advanced Features
+**Estimated Time:** 8 hours
+**Priority:** Medium
+**Dependencies:** [084,060,134]
+
+**Objective:**
+Add connectors to import from popular tools (e.g., Mermaid, draw.io) with mapping review flow.
+
+**Technical Requirements:**
+- Pluggable import parsers
+- Mapping adapters
+
+**Implementation Steps:**
+1. Implement parser for Mermaid and draw.io.
+2. Map entities to internal model.
+3. Route through mapping review UI.
+
+**Files to Create/Modify:**
+- `src/lib/import/connectors/mermaid.ts`
+- `src/lib/import/connectors/drawio.ts`
+
+**Acceptance Criteria:**
+- [ ] Imports produce usable diagrams
+- [ ] Review UI catches mismatches
+
+**Testing Strategy:**
+- Fixture-based parser tests
+
+**Potential Challenges:**
+- Ambiguities in external schemas
+
+**Reference Documentation:**
+- PRD "Import UX"
+
+---
+
+### Task 171: Advanced Presence Visualizations
+**Phase:** Advanced Features
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [072,132]
+
+**Objective:**
+Enhance presence indicators with avatars, activity trails, and attention heatmaps.
+
+**Technical Requirements:**
+- Lightweight presence overlays
+- Privacy-aware aggregation
+
+**Implementation Steps:**
+1. Show avatars and cursors with names.
+2. Add trails for recent edits.
+3. Aggregate heatmaps for attention zones.
+
+**Files to Create/Modify:**
+- `src/modules/realtime/components/presence-overlay.tsx`
+- `src/lib/realtime/metrics.ts`
+
+**Acceptance Criteria:**
+- [ ] Presence overlays remain performant
+- [ ] Heatmaps are privacy-safe
+
+**Testing Strategy:**
+- Multi-user sessions
+
+**Potential Challenges:**
+- Visual clutter on dense graphs
+
+**Reference Documentation:**
+- PRD "Realtime UX"
+
+---
+
+### Task 172: Component Library Extraction for Nodes/Edges
+**Phase:** Advanced Features
+**Estimated Time:** 6 hours
+**Priority:** Medium
+**Dependencies:** [011,012,079]
+
+**Objective:**
+Extract reusable component library for node and edge visuals with theming and accessibility baked in.
+
+**Technical Requirements:**
+- Package-style module boundaries
+- Theming tokens integration
+
+**Implementation Steps:**
+1. Factor node/edge visuals into `src/components/diagram-ui/`.
+2. Ensure props contracts and docs.
+3. Wire theming tokens and a11y attributes.
+
+**Files to Create/Modify:**
+- `src/components/diagram-ui/*`
+- `docs/COMPONENT_HIERARCHY.md`
+
+**Acceptance Criteria:**
+- [ ] Components reusable across features
+- [ ] Theming and a11y consistent
+
+**Testing Strategy:**
+- Visual and contract tests
+
+**Potential Challenges:**
+- Avoiding breaking changes for editor
+
+**Reference Documentation:**
+- PRD "Componentization"
+
+---
+
+### Task 173: Export Diff Reports Between Milestones
+**Phase:** Advanced Features
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [130,149]
+
+**Objective:**
+Generate human-readable diff reports between milestones/releases for stakeholders.
+
+**Technical Requirements:**
+- Use structural diff to produce MD/HTML report
+- Include visuals where relevant
+
+**Implementation Steps:**
+1. Compute diff between selected milestones.
+2. Render report with summaries and highlights.
+3. Export as MD/HTML in bundle.
+
+**Files to Create/Modify:**
+- `src/lib/export/reports/diff.ts`
+- `src/modules/export/components/diff-report.tsx`
+
+**Acceptance Criteria:**
+- [ ] Reports are clear and actionable
+- [ ] Bundled with exports on demand
+
+**Testing Strategy:**
+- Snapshot tests on reports
+
+**Potential Challenges:**
+- Large diffs readability
+
+**Reference Documentation:**
+- PRD "Versioning and Reporting"
+
+---
+
+### Task 174: Compliance Mode (PII Redaction and Logging)
+**Phase:** Advanced Features
+**Estimated Time:** 6 hours
+**Priority:** High
+**Dependencies:** [128,163,167]
+
+**Objective:**
+Introduce compliance mode to redact PII in imports/exports and tighten logging.
+
+**Technical Requirements:**
+- PII detectors and redactors
+- Audit log minimization
+
+**Implementation Steps:**
+1. Add PII detection and redaction in import/export.
+2. Minimize and encrypt logs in compliance mode.
+3. Expose workspace-level toggle and policy.
+
+**Files to Create/Modify:**
+- `src/lib/compliance/pii.ts`
+- `src/lib/compliance/logging.ts`
+- `src/modules/settings/settings.page.tsx`
+
+**Acceptance Criteria:**
+- [ ] Exports/imports are redaction-safe
+- [ ] Logs meet compliance policy
+
+**Testing Strategy:**
+- Redaction fixtures and audits
+
+**Potential Challenges:**
+- Over-redaction vs fidelity
+
+**Reference Documentation:**
+- PRD "Compliance"
+
+---
+
+### Task 175: AI Test Case Generator for E2E
+**Phase:** Advanced Features
+**Estimated Time:** 6 hours
+**Priority:** Medium
+**Dependencies:** [141,076]
+
+**Objective:**
+Use AI to propose Playwright test scenarios from PRDs and recent changes.
+
+**Technical Requirements:**
+- Prompt design for scenario generation
+- Safe review/approve flow
+
+**Implementation Steps:**
+1. Generate candidate E2E scenarios from PRD and git diff.
+2. UI to review and accept scenarios.
+3. Emit Playwright test stubs.
+
+**Files to Create/Modify:**
+- `src/lib/ai/testing/scenario-gen.ts`
+- `src/modules/testing/ai-tests.page.tsx`
+
+**Acceptance Criteria:**
+- [ ] Useful scenarios are generated
+- [ ] Accepted scenarios scaffold test files
+
+**Testing Strategy:**
+- Manual validation of generated tests
+
+**Potential Challenges:**
+- Hallucinated or brittle test steps
+
+**Reference Documentation:**
+- PRD "Testing Strategy"
+
+---
+
+### Task 176: Auto-Resolve Suggestions from Agent Confidence
+**Phase:** Advanced Features
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [121,143]
+
+**Objective:**
+Auto-apply low-risk suggestions when agent confidence and rule checks exceed thresholds.
+
+**Technical Requirements:**
+- Confidence scoring exposure
+- Rule-engine gating
+
+**Implementation Steps:**
+1. Surface agent confidence per suggestion.
+2. Gate auto-apply through validation rules.
+3. Provide undo trail and audit log entry.
+
+**Files to Create/Modify:**
+- `src/lib/ai/confidence.ts`
+- `src/lib/validation/rule-engine.ts`
+- `src/modules/ai/components/suggestion-controls.tsx`
+
+**Acceptance Criteria:**
+- [ ] Safe suggestions auto-apply
+- [ ] Undo and audit are available
+
+**Testing Strategy:**
+- Scenario tests with mixed suggestions
+
+**Potential Challenges:**
+- Calibrating confidence thresholds
+
+**Reference Documentation:**
+- PRD "AI Agent System"
+
+---
+
+### Task 177: Live Co-Editing Cursor Chat
+**Phase:** Advanced Features
+**Estimated Time:** 6 hours
+**Priority:** Medium
+**Dependencies:** [072,171]
+
+**Objective:**
+Enable inline cursor-attached mini chat for quick coordination without opening the main chat panel.
+
+**Technical Requirements:**
+- Lightweight, ephemeral messages
+- DO-backed fanout
+
+**Implementation Steps:**
+1. Add cursor chat bubble UI.
+2. Fanout ephemeral messages via presence DO.
+3. Allow escalate-to-main-chat.
+
+**Files to Create/Modify:**
+- `src/modules/realtime/components/cursor-chat.tsx`
+- `src/lib/realtime/presence-do.ts`
+
+**Acceptance Criteria:**
+- [ ] Messages appear near cursors
+- [ ] No persistence unless escalated
+
+**Testing Strategy:**
+- Multi-user session checks
+
+**Potential Challenges:**
+- Visual clutter and focus management
+
+**Reference Documentation:**
+- PRD "Realtime UX"
+
+---
+
+### Task 178: Dependency Graph for Tasks and Modules
+**Phase:** Advanced Features
+**Estimated Time:** 7 hours
+**Priority:** Medium
+**Dependencies:** [021,065,173]
+
+**Objective:**
+Render a dependency graph across tasks, modules, and exports to aid planning and releases.
+
+**Technical Requirements:**
+- Graph build from docs and code metadata
+- Interactive filtering
+
+**Implementation Steps:**
+1. Parse docs/tasks for dependency annotations.
+2. Build dependency graph model.
+3. Visualize with filters and export.
+
+**Files to Create/Modify:**
+- `src/lib/depgraph/build.ts`
+- `src/modules/depgraph/depgraph.page.tsx`
+
+**Acceptance Criteria:**
+- [ ] Graph reflects current dependencies
+- [ ] Filters by phase/module work
+
+**Testing Strategy:**
+- Snapshot tests on graph data
+
+**Potential Challenges:**
+- Keeping metadata up-to-date
+
+**Reference Documentation:**
+- PRD "Planning and Releases"
+
+---
+
+### Task 179: AI Refactoring Suggestions for Diagram Hygiene
+**Phase:** Advanced Features
+**Estimated Time:** 6 hours
+**Priority:** Medium
+**Dependencies:** [154,136]
+
+**Objective:**
+Use analytics and lint signals to propose refactors that reduce complexity and improve clarity.
+
+**Technical Requirements:**
+- Combine metrics and lint hints
+- Safe refactor previews
+
+**Implementation Steps:**
+1. Generate refactor proposals from metrics+lint.
+2. Preview impact and diffs.
+3. Apply with undo and audit.
+
+**Files to Create/Modify:**
+- `src/lib/ai/refactor/proposals.ts`
+- `src/modules/ai/components/refactor-panel.tsx`
+
+**Acceptance Criteria:**
+- [ ] Proposals improve metrics post-apply
+- [ ] Users can preview and apply safely
+
+**Testing Strategy:**
+- Before/after metric comparisons
+
+**Potential Challenges:**
+- Avoiding subjective refactors
+
+**Reference Documentation:**
+- PRD "Analytics and Validation"
+
+---
+
+### Task 180: Phase 3 Hardening and Integration Pass
+**Phase:** Advanced Features
+**Estimated Time:** 8 hours
+**Priority:** High
+**Dependencies:** [All Phase 3 tasks]
+
+**Objective:**
+Stabilize and harden Phase 3 features: performance, error paths, telemetry, and documentation.
+
+**Technical Requirements:**
+- Benchmarks and profiling
+- Error budget checks
+- Docs and examples
+
+**Implementation Steps:**
+1. Run perf/consistency benchmarks on critical paths.
+2. Audit error handling and monitoring coverage.
+3. Update docs and produce example projects.
+
+**Files to Create/Modify:**
+- `docs/TESTING_STRATEGY.md`
+- `docs/IMPLEMENTATION_TASKS.md` (checklist updates)
+- `src/lib/perf/benchmarks/*.ts`
+
+**Acceptance Criteria:**
+- [ ] Benchmarks meet targets
+- [ ] No critical open issues remain
+
+**Testing Strategy:**
+- Full integration and perf test suites
+
+**Potential Challenges:**
+- Coordinating fixes across features
+
+**Reference Documentation:**
+- PRD "Phase 3 Wrap-up"
+
+---
+
 ## Phase 4: Production Polish (Weeks 10-12)
 ### Tasks 181-230
 
-(Tasks to be appended in subsequent batch: performance optimization, error handling, testing, docs, deployment, monitoring.)
+### Task 181: Performance Budget and Thresholds
+**Phase:** Production Polish
+**Estimated Time:** 5 hours
+**Priority:** High
+**Dependencies:** [180,068,157]
+
+**Objective:**
+Establish performance budgets for load, interaction, and export operations with CI enforcement.
+
+**Technical Requirements:**
+- Budgets for LCP, INP, memory, export time
+- CI gates and reporting
+
+**Implementation Steps:**
+1. Define budgets and thresholds by surface.
+2. Add CI job to fail on regressions.
+3. Visualize trend lines in metrics dashboard.
+
+**Files to Create/Modify:**
+- `tests/performance/budgets.json`
+- `tests/performance/budget-check.ts`
+
+**Acceptance Criteria:**
+- [ ] CI fails on budget regressions
+- [ ] Dashboard shows budget adherence
+
+**Testing Strategy:**
+- Synthetic tests and historical comparisons
+
+**Potential Challenges:**
+- Flaky metrics across environments
+
+**Reference Documentation:**
+- PRD "Performance Monitoring"
+
+---
+
+### Task 182: Error Taxonomy and User-Facing Messaging
+**Phase:** Production Polish
+**Estimated Time:** 5 hours
+**Priority:** High
+**Dependencies:** [067,140]
+
+**Objective:**
+Create a consistent error taxonomy and map to user-friendly messages and recovery actions.
+
+**Technical Requirements:**
+- Error codes and categories
+- Mapping to UI messages
+
+**Implementation Steps:**
+1. Define taxonomy and codes.
+2. Implement mapping in error boundary and toasts.
+3. Add recovery tips per category.
+
+**Files to Create/Modify:**
+- `src/lib/error/taxonomy.ts`
+- `src/components/error-boundary-enhanced.tsx`
+
+**Acceptance Criteria:**
+- [ ] Users see clear, actionable errors
+- [ ] Logs include stable codes
+
+**Testing Strategy:**
+- Error injection tests
+
+**Potential Challenges:**
+- Coverage of edge cases
+
+**Reference Documentation:**
+- PRD "Error Handling Strategy"
+
+---
+
+### Task 183: Accessibility Audit and Fixes (App-wide)
+**Phase:** Production Polish
+**Estimated Time:** 6 hours
+**Priority:** High
+**Dependencies:** [069,165]
+
+**Objective:**
+Run a full a11y audit and fix color contrast, landmarks, focus order, and ARIA labels.
+
+**Technical Requirements:**
+- Axe and manual audits
+- Keyboard navigation integrity
+
+**Implementation Steps:**
+1. Run automated and manual a11y audits.
+2. Fix issues across core flows.
+3. Add a11y checks to CI.
+
+**Files to Create/Modify:**
+- `tests/a11y/*.ts`
+- `src/components/*` (fixes)
+
+**Acceptance Criteria:**
+- [ ] Zero critical a11y issues
+- [ ] CI a11y checks pass
+
+**Testing Strategy:**
+- Automated + manual assistive tech checks
+
+**Potential Challenges:**
+- Conflicts with custom visuals
+
+**Reference Documentation:**
+- PRD "Accessibility"
+
+---
+
+### Task 184: Observability: Tracing, Metrics, and Logs
+**Phase:** Production Polish
+**Estimated Time:** 7 hours
+**Priority:** High
+**Dependencies:** [157,103]
+
+**Objective:**
+Add distributed tracing, structured logs, and key business metrics with sampling.
+
+**Technical Requirements:**
+- Trace context propagation
+- JSON logs and sampling
+
+**Implementation Steps:**
+1. Add tracing middleware and context propagation.
+2. Structure logs and add sampling knobs.
+3. Emit core metrics to dashboard.
+
+**Files to Create/Modify:**
+- `src/lib/observability/tracing.ts`
+- `src/lib/observability/logging.ts`
+- `src/lib/observability/metrics.ts`
+
+**Acceptance Criteria:**
+- [ ] Traces cover critical paths
+- [ ] Logs are structured and searchable
+
+**Testing Strategy:**
+- Trace assertions in integration tests
+
+**Potential Challenges:**
+- Overhead vs visibility trade-offs
+
+**Reference Documentation:**
+- PRD "Observability"
+
+---
+
+### Task 185: Deployment Hardening and Rollback Strategy
+**Phase:** Production Polish
+**Estimated Time:** 6 hours
+**Priority:** High
+**Dependencies:** [deploy, 180]
+
+**Objective:**
+Define blue/green or canary strategy, health checks, and fast rollback mechanism.
+
+**Technical Requirements:**
+- Canary gates and health endpoints
+- Rollback automation
+
+**Implementation Steps:**
+1. Add health endpoints and checks.
+2. Configure canary rollout with metrics gates.
+3. Script rollback with one command.
+
+**Files to Create/Modify:**
+- `docs/deploy-complete.md`
+- `src/app/api/health/route.ts`
+- `.github/workflows/deploy.yml`
+
+**Acceptance Criteria:**
+- [ ] Canary deploys with guardrails
+- [ ] Rollback completes under 2 minutes
+
+**Testing Strategy:**
+- Dry-run canary and rollback
+
+**Potential Challenges:**
+- Metrics gate tuning
+
+**Reference Documentation:**
+- PRD "Deployment"
+
+---
+
+### Task 186: Security Hardening and Pen Test Fixes
+**Phase:** Production Polish
+**Estimated Time:** 8 hours
+**Priority:** High
+**Dependencies:** [138,174]
+
+**Objective:**
+Address findings from security review and pen testing; add SAST/DAST to CI.
+
+**Technical Requirements:**
+- SAST/DAST integration
+- Secrets scanning
+
+**Implementation Steps:**
+1. Integrate SAST/DAST tools in CI.
+2. Fix critical findings and document mitigations.
+3. Add continuous secrets scanning.
+
+**Files to Create/Modify:**
+- `.github/workflows/security.yml`
+- `docs/SECURITY.md`
+
+**Acceptance Criteria:**
+- [ ] No critical open findings
+- [ ] CI security checks pass
+
+**Testing Strategy:**
+- Periodic scans and audits
+
+**Potential Challenges:**
+- False positives management
+
+**Reference Documentation:**
+- PRD "Security"
+
+---
+
+### Task 187: Billing and Plan Enforcement Polish
+**Phase:** Production Polish
+**Estimated Time:** 6 hours
+**Priority:** Medium
+**Dependencies:** [169]
+
+**Objective:**
+Finalize billing UX, proration rules, and edge-case handling for plan changes and overages.
+
+**Technical Requirements:**
+- Proration and grace periods
+- Clear messaging and receipts
+
+**Implementation Steps:**
+1. Implement proration for mid-cycle changes.
+2. Add grace periods and overage handling.
+3. Improve billing history and receipts UX.
+
+**Files to Create/Modify:**
+- `src/modules/billing/*`
+- `docs/ARCHITECTURE_DECISIONS.md` (billing)
+
+**Acceptance Criteria:**
+- [ ] Plan changes handled smoothly
+- [ ] Users understand charges
+
+**Testing Strategy:**
+- Billing scenario tests
+
+**Potential Challenges:**
+- Edge cases around cancellations
+
+**Reference Documentation:**
+- PRD "Plans and Billing"
+
+---
+
+### Task 188: Internationalization (i18n) Foundation
+**Phase:** Production Polish
+**Estimated Time:** 6 hours
+**Priority:** Medium
+**Dependencies:** [142,069]
+
+**Objective:**
+Introduce i18n scaffolding, key extraction, and initial locale support.
+
+**Technical Requirements:**
+- i18n provider and key management
+- Locale switcher and fallback
+
+**Implementation Steps:**
+1. Add i18n provider and key extraction tooling.
+2. Externalize strings in core flows.
+3. Add locale switcher and fallback.
+
+**Files to Create/Modify:**
+- `src/lib/i18n/*`
+- `src/components/i18n/locale-switcher.tsx`
+
+**Acceptance Criteria:**
+- [ ] Core flows localized
+- [ ] Keys extracted and managed
+
+**Testing Strategy:**
+- Pseudo-locale tests
+
+**Potential Challenges:**
+- Layout shifts for longer strings
+
+**Reference Documentation:**
+- PRD "Internationalization"
+
+---
+
+### Task 189: Documentation Polish and Examples Gallery
+**Phase:** Production Polish
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [180]
+
+**Objective:**
+Polish docs and create an examples gallery with downloadable sample projects and diagrams.
+
+**Technical Requirements:**
+- Gallery structure and search
+- Example downloads
+
+**Implementation Steps:**
+1. Add examples gallery section to docs site.
+2. Curate and document sample projects.
+3. Provide downloadable bundles.
+
+**Files to Create/Modify:**
+- `docs/PROJECT_OVERVIEW.md`
+- `docs/examples/*`
+
+**Acceptance Criteria:**
+- [ ] Examples are easy to find and use
+- [ ] Docs are up-to-date and clear
+
+**Testing Strategy:**
+- Manual doc QA
+
+**Potential Challenges:**
+- Keeping examples in sync with releases
+
+**Reference Documentation:**
+- PRD "Documentation"
+
+---
+
+### Task 190: Production Readiness Checklist Completion
+**Phase:** Production Polish
+**Estimated Time:** 5 hours
+**Priority:** High
+**Dependencies:** [181–189]
+
+**Objective:**
+Complete production readiness checklist and obtain sign-off for GA.
+
+**Technical Requirements:**
+- Checklist coverage
+- Sign-off workflow
+
+**Implementation Steps:**
+1. Verify all checklist items.
+2. Collect sign-offs from stakeholders.
+3. Tag release candidate.
+
+**Files to Create/Modify:**
+- `docs/DEPLOYMENT_CHECKLIST.md`
+- `docs/deploy-complete.md`
+
+**Acceptance Criteria:**
+- [ ] All checklist items complete
+- [ ] RC tagged and documented
+
+**Testing Strategy:**
+- Final E2E smoke
+
+**Potential Challenges:**
+- Coordinating sign-offs
+
+**Reference Documentation:**
+- PRD "Production Readiness"
+
+---
+
+### Task 191: SLA Monitoring and Incident Runbooks
+**Phase:** Production Polish
+**Estimated Time:** 6 hours
+**Priority:** High
+**Dependencies:** [184,185]
+
+**Objective:**
+Define SLAs/SLOs and add incident runbooks with links from alerts to docs.
+
+**Technical Requirements:**
+- SLO targets and alerting
+- Runbook documents
+
+**Implementation Steps:**
+1. Define SLOs for availability and latency.
+2. Configure alerts tied to SLO breaches.
+3. Create runbooks and link from alerts.
+
+**Files to Create/Modify:**
+- `docs/runbooks/*.md`
+- `src/lib/observability/metrics.ts`
+
+**Acceptance Criteria:**
+- [ ] Alerts point to actionable runbooks
+- [ ] SLOs tracked on dashboard
+
+**Testing Strategy:**
+- Alert simulation drills
+
+**Potential Challenges:**
+- Alert fatigue and tuning
+
+**Reference Documentation:**
+- PRD "Operations"
+
+---
+
+### Task 192: Backups and Restore Procedures
+**Phase:** Production Polish
+**Estimated Time:** 6 hours
+**Priority:** High
+**Dependencies:** [149]
+
+**Objective:**
+Automate periodic backups for DB/storage and document restore procedures.
+
+**Technical Requirements:**
+- Scheduled backups
+- Verified restore steps
+
+**Implementation Steps:**
+1. Schedule database and storage backups.
+2. Verify restore in staging.
+3. Document RPO/RTO.
+
+**Files to Create/Modify:**
+- `docs/OPERATIONS.md`
+- `scripts/backups/*`
+
+**Acceptance Criteria:**
+- [ ] Backups are automated and monitored
+- [ ] Restore procedure validated
+
+**Testing Strategy:**
+- Periodic restore drills
+
+**Potential Challenges:**
+- Cost and retention policies
+
+**Reference Documentation:**
+- PRD "Operations"
+
+---
+
+### Task 193: Privacy Policy and Data Deletion Flows
+**Phase:** Production Polish
+**Estimated Time:** 5 hours
+**Priority:** High
+**Dependencies:** [167,174]
+
+**Objective:**
+Implement user data deletion requests and publish privacy policy with clear data practices.
+
+**Technical Requirements:**
+- Verified deletion flow
+- Policy documentation
+
+**Implementation Steps:**
+1. Add API and UI for deletion requests.
+2. Implement verified deletion across services.
+3. Publish privacy policy.
+
+**Files to Create/Modify:**
+- `src/app/api/privacy/delete/route.ts`
+- `docs/PRIVACY.md`
+
+**Acceptance Criteria:**
+- [ ] Deletion completes within SLA
+- [ ] Policy published and linked
+
+**Testing Strategy:**
+- Deletion request e2e test
+
+**Potential Challenges:**
+- Cross-service propagation
+
+**Reference Documentation:**
+- PRD "Compliance"
+
+---
+
+### Task 194: Rate Limit Dashboards and Self-Service Unblock
+**Phase:** Production Polish
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [045,169]
+
+**Objective:**
+Provide dashboards for rate limit hits and allow admins to request temporary raises.
+
+**Technical Requirements:**
+- Dashboards and admin workflows
+- Temporary limit overrides
+
+**Implementation Steps:**
+1. Add dashboards showing rate limit stats.
+2. Implement admin request flow for raises.
+3. Temporary overrides with expiry.
+
+**Files to Create/Modify:**
+- `src/modules/admin/rate-limits.page.tsx`
+- `src/lib/billing/usage.ts`
+
+**Acceptance Criteria:**
+- [ ] Admins can request and apply raises
+- [ ] Dashboards reflect changes
+
+**Testing Strategy:**
+- Admin workflow tests
+
+**Potential Challenges:**
+- Abuse prevention
+
+**Reference Documentation:**
+- PRD "Plans and Limits"
+
+---
+
+### Task 195: Export Pipeline Caching and Incremental Builds
+**Phase:** Production Polish
+**Estimated Time:** 6 hours
+**Priority:** Medium
+**Dependencies:** [065,144]
+
+**Objective:**
+Cache export steps and support incremental rebuilds for faster repeated exports.
+
+**Technical Requirements:**
+- Content hashing and cache keys
+- Incremental build graph
+
+**Implementation Steps:**
+1. Hash inputs and cache intermediate artifacts.
+2. Skip unchanged steps on rebuild.
+3. Surface cache hits/misses in logs.
+
+**Files to Create/Modify:**
+- `src/lib/export/cache.ts`
+- `src/lib/export/pipeline.ts`
+
+**Acceptance Criteria:**
+- [ ] Repeat exports are faster
+- [ ] Logs show caching behavior
+
+**Testing Strategy:**
+- Timing comparisons with/without cache
+
+**Potential Challenges:**
+- Cache invalidation correctness
+
+**Reference Documentation:**
+- PRD "Export System"
+
+---
+
+### Task 196: Diagram Snapshot Diff Viewer in App
+**Phase:** Production Polish
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [130,149]
+
+**Objective:**
+Add in-app diff viewer for diagram snapshots with side-by-side and inline modes.
+
+**Technical Requirements:**
+- Visual diff modes
+- Jump-to-change navigation
+
+**Implementation Steps:**
+1. Implement side-by-side and inline diff viewers.
+2. Add navigation between changes.
+3. Hook into version/milestone selection.
+
+**Files to Create/Modify:**
+- `src/modules/versioning/diff-viewer.tsx`
+- `src/lib/diagram/diff.ts`
+
+**Acceptance Criteria:**
+- [ ] Diffs render clearly on large diagrams
+- [ ] Navigation is intuitive
+
+**Testing Strategy:**
+- Visual diff test fixtures
+
+**Potential Challenges:**
+- Performance on large diffs
+
+**Reference Documentation:**
+- PRD "Versioning"
+
+---
+
+### Task 197: Mobile and Tablet UX Polish
+**Phase:** Production Polish
+**Estimated Time:** 6 hours
+**Priority:** Medium
+**Dependencies:** [054]
+
+**Objective:**
+Refine responsive layouts, touch targets, and gestures for mobile/tablet users.
+
+**Technical Requirements:**
+- Touch gesture support
+- Responsive canvas and panels
+
+**Implementation Steps:**
+1. Improve touch drag/zoom/selection.
+2. Optimize panel layouts for small screens.
+3. Increase touch target sizes.
+
+**Files to Create/Modify:**
+- `src/modules/diagram/components/*`
+- `src/components/ui/*`
+
+**Acceptance Criteria:**
+- [ ] Core flows usable on tablet
+- [ ] No critical mobile layout issues
+
+**Testing Strategy:**
+- Device lab manual testing
+
+**Potential Challenges:**
+- Limited screen real estate
+
+**Reference Documentation:**
+- PRD "Responsive Design"
+
+---
+
+### Task 198: Customer Support and Feedback Hooks
+**Phase:** Production Polish
+**Estimated Time:** 4 hours
+**Priority:** Medium
+**Dependencies:** [151]
+
+**Objective:**
+Add in-app support contact, feedback capture, and issue templates with logs attached.
+
+**Technical Requirements:**
+- Feedback forms and templates
+- Log attachment with consent
+
+**Implementation Steps:**
+1. Add support/feedback UI with categories.
+2. Attach recent logs with user consent.
+3. Route to support channel or ticketing.
+
+**Files to Create/Modify:**
+- `src/modules/support/feedback.page.tsx`
+- `src/lib/observability/logging.ts`
+
+**Acceptance Criteria:**
+- [ ] Users can submit actionable feedback
+- [ ] Logs help reproduce issues
+
+**Testing Strategy:**
+- Feedback submission flow tests
+
+**Potential Challenges:**
+- Privacy and data minimization
+
+**Reference Documentation:**
+- PRD "Support"
+
+---
+
+### Task 199: Onboarding Checklists and Templates
+**Phase:** Production Polish
+**Estimated Time:** 4 hours
+**Priority:** Medium
+**Dependencies:** [142,189]
+
+**Objective:**
+Provide guided checklists and project templates for new users to get started quickly.
+
+**Technical Requirements:**
+- Checklists and sample templates
+- Progress tracking
+
+**Implementation Steps:**
+1. Add onboarding checklists tied to features.
+2. Provide starter templates and quick starts.
+3. Track progress and suggest next steps.
+
+**Files to Create/Modify:**
+- `src/modules/onboarding/checklists.page.tsx`
+- `templates/starters/*`
+
+**Acceptance Criteria:**
+- [ ] New users can complete core actions
+- [ ] Progress tracking works
+
+**Testing Strategy:**
+- User testing on first-run
+
+**Potential Challenges:**
+- Overwhelming users with steps
+
+**Reference Documentation:**
+- PRD "Onboarding"
+
+---
+
+### Task 200: Release Notes and Changelog Automation
+**Phase:** Production Polish
+**Estimated Time:** 4 hours
+**Priority:** Medium
+**Dependencies:** [189]
+
+**Objective:**
+Automate release notes and changelog generation from commits and merged PRs.
+
+**Technical Requirements:**
+- Conventional commit parsing
+- Changelog templating
+
+**Implementation Steps:**
+1. Parse commits/PRs for release notes.
+2. Generate changelog and release notes.
+3. Attach notes to releases automatically.
+
+**Files to Create/Modify:**
+- `.github/workflows/release.yml`
+- `scripts/release-notes.ts`
+
+**Acceptance Criteria:**
+- [ ] Changelog updates are automated
+- [ ] Release notes generated on tag
+
+**Testing Strategy:**
+- Dry-run on staging branch
+
+**Potential Challenges:**
+- Noisy commit messages
+
+**Reference Documentation:**
+- PRD "Release Management"
+
+---
+
+### Task 201: SSO (SAML/OIDC) Enterprise Readiness
+**Phase:** Production Polish
+**Estimated Time:** 8 hours
+**Priority:** High
+**Dependencies:** [004,030,112]
+
+**Objective:**
+Add SAML/OIDC SSO integration for enterprise tenants with Just-In-Time provisioning.
+
+**Technical Requirements:**
+- SAML/OIDC provider support
+- JIT user provisioning
+
+**Implementation Steps:**
+1. Implement OIDC first-party provider.
+2. Add SAML integration with metadata upload.
+3. JIT provision users and map roles.
+
+**Files to Create/Modify:**
+- `src/lib/auth/enterprise/sso.ts`
+- `src/app/api/auth/sso/*`
+
+**Acceptance Criteria:**
+- [ ] Tenants can configure SSO
+- [ ] Users provisioned on first login
+
+**Testing Strategy:**
+- Staging IdP integration tests
+
+**Potential Challenges:**
+- Metadata variations between IdPs
+
+**Reference Documentation:**
+- PRD "Enterprise"
+
+---
+
+### Task 202: Audit Exports and Legal Hold
+**Phase:** Production Polish
+**Estimated Time:** 6 hours
+**Priority:** High
+**Dependencies:** [163,186]
+
+**Objective:**
+Enable audit log export and legal hold on specific users/projects.
+
+**Technical Requirements:**
+- Exportable audit logs
+- Legal hold flags and retention
+
+**Implementation Steps:**
+1. Add export for audit logs with filters.
+2. Implement legal hold flag preventing deletion.
+3. Surface legal hold status in admin UI.
+
+**Files to Create/Modify:**
+- `src/lib/security/audit-export.ts`
+- `src/modules/admin/legal-hold.page.tsx`
+
+**Acceptance Criteria:**
+- [ ] Exports respect filters and retention
+- [ ] Legal holds prevent deletions
+
+**Testing Strategy:**
+- Admin e2e test flows
+
+**Potential Challenges:**
+- Storage and privacy balance
+
+**Reference Documentation:**
+- PRD "Compliance"
+
+---
+
+### Task 203: Disaster Recovery Game Days
+**Phase:** Production Polish
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [192,185]
+
+**Objective:**
+Run DR game days to validate backups, restore, and failover procedures; capture learnings.
+
+**Technical Requirements:**
+- Planned failure scenarios
+- Postmortem templates
+
+**Implementation Steps:**
+1. Script failure scenarios and runbooks.
+2. Execute DR drills quarterly.
+3. Capture learnings and update docs.
+
+**Files to Create/Modify:**
+- `docs/runbooks/dr-scenarios.md`
+- `docs/postmortems/template.md`
+
+**Acceptance Criteria:**
+- [ ] DR drills executed and documented
+- [ ] Action items tracked to completion
+
+**Testing Strategy:**
+- Scheduled drills
+
+**Potential Challenges:**
+- Coordinating across teams
+
+**Reference Documentation:**
+- PRD "Operations"
+
+---
+
+### Task 204: Export Webhooks and Integrations
+**Phase:** Production Polish
+**Estimated Time:** 6 hours
+**Priority:** Medium
+**Dependencies:** [065,100]
+
+**Objective:**
+Trigger webhooks on export completion and integrate with external destinations (S3, Git, Notion).
+
+**Technical Requirements:**
+- Signed webhook payloads
+- Destination adapters
+
+**Implementation Steps:**
+1. Add webhook registration and delivery.
+2. Implement S3/Git/Notion adapters.
+3. Retries and dead-letter queue.
+
+**Files to Create/Modify:**
+- `src/app/api/webhooks/exports/route.ts`
+- `src/lib/integrations/*`
+
+**Acceptance Criteria:**
+- [ ] Webhooks fire reliably with retries
+- [ ] Adapters deliver content correctly
+
+**Testing Strategy:**
+- Integration tests with mocks
+
+**Potential Challenges:**
+- Destination rate limits
+
+**Reference Documentation:**
+- PRD "Integrations"
+
+---
+
+### Task 205: Multi-Region Failover (Read-Only Mode)
+**Phase:** Production Polish
+**Estimated Time:** 8 hours
+**Priority:** High
+**Dependencies:** [167,185]
+
+**Objective:**
+Provide automated multi-region failover with read-only mode during partial outages.
+
+**Technical Requirements:**
+- Health-based routing
+- Read-only feature gates
+
+**Implementation Steps:**
+1. Add health checks and regional routing.
+2. Gate mutating operations under outage.
+3. Communicate status in UI.
+
+**Files to Create/Modify:**
+- `src/lib/infra/regions.ts`
+- `src/app/api/health/route.ts`
+- `src/components/status-banner.tsx`
+
+**Acceptance Criteria:**
+- [ ] Failover occurs automatically
+- [ ] Read-only mode prevents data loss
+
+**Testing Strategy:**
+- Chaos tests simulating regional failures
+
+**Potential Challenges:**
+- Consistency after failback
+
+**Reference Documentation:**
+- PRD "Reliability"
+
+---
+
+### Task 206: End-User Data Export (Self-Service)
+**Phase:** Production Polish
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [093,195]
+
+**Objective:**
+Allow users to export their data (projects, diagrams, chats) in standard formats.
+
+**Technical Requirements:**
+- Export formats and scoping
+- Rate-limited requests
+
+**Implementation Steps:**
+1. Add self-service export UI.
+2. Package data into archive with index.
+3. Notify via email/webhook when ready.
+
+**Files to Create/Modify:**
+- `src/modules/account/export.page.tsx`
+- `src/lib/export/bundle.ts`
+
+**Acceptance Criteria:**
+- [ ] Users can export scoped data
+- [ ] Exports are rate-limited and secure
+
+**Testing Strategy:**
+- E2E export flow tests
+
+**Potential Challenges:**
+- Large datasets and timeouts
+
+**Reference Documentation:**
+- PRD "Compliance"
+
+---
+
+### Task 207: Fine-Grained Permissions and Sharing Policies
+**Phase:** Production Polish
+**Estimated Time:** 6 hours
+**Priority:** Medium
+**Dependencies:** [089,153]
+
+**Objective:**
+Introduce fine-grained permissions for nodes, edges, and exports, with policy templates.
+
+**Technical Requirements:**
+- Resource-scoped ACLs
+- Policy templates and inheritance
+
+**Implementation Steps:**
+1. Define ACL model for diagram resources.
+2. Implement policy templates and inheritance.
+3. Update UI for permission editing.
+
+**Files to Create/Modify:**
+- `src/lib/security/acl.ts`
+- `src/modules/sharing/manage.page.tsx`
+
+**Acceptance Criteria:**
+- [ ] Permissions editable and enforced
+- [ ] Templates speed up configuration
+
+**Testing Strategy:**
+- ACL unit and integration tests
+
+**Potential Challenges:**
+- Complexity of inheritance rules
+
+**Reference Documentation:**
+- PRD "Sharing and Permissions"
+
+---
+
+### Task 208: Diagram Printing Mode and Page Tiling
+**Phase:** Production Polish
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [074,156]
+
+**Objective:**
+Add print-optimized mode with page tiling and margins for large diagrams.
+
+**Technical Requirements:**
+- Print CSS and tiling
+- Page margin controls
+
+**Implementation Steps:**
+1. Implement print-optimized styles and layout.
+2. Add page tiling and margin controls.
+3. Preview page boundaries in editor.
+
+**Files to Create/Modify:**
+- `src/modules/export/components/print-preview.tsx`
+- `src/lib/export/image/renderer.ts`
+
+**Acceptance Criteria:**
+- [ ] Large diagrams print clearly
+- [ ] Tiling respects page settings
+
+**Testing Strategy:**
+- Print preview tests
+
+**Potential Challenges:**
+- Browser differences in print engines
+
+**Reference Documentation:**
+- PRD "Export System"
+
+---
+
+### Task 209: Admin Analytics for Tenant Usage
+**Phase:** Production Polish
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [136,169]
+
+**Objective:**
+Provide admin analytics on tenant usage: active users, projects, exports, AI calls, storage.
+
+**Technical Requirements:**
+- Aggregations and charts
+- Time window filters
+
+**Implementation Steps:**
+1. Add aggregations for tenant usage.
+2. Build charts with filters.
+3. Export data as CSV.
+
+**Files to Create/Modify:**
+- `src/modules/admin/analytics.page.tsx`
+- `src/lib/analytics/metrics.ts`
+
+**Acceptance Criteria:**
+- [ ] Admins can analyze usage trends
+- [ ] CSV export works
+
+**Testing Strategy:**
+- Analytics query tests
+
+**Potential Challenges:**
+- Query performance at scale
+
+**Reference Documentation:**
+- PRD "Analytics"
+
+---
+
+### Task 210: GA Launch Checklist and Post-Launch Monitoring
+**Phase:** Production Polish
+**Estimated Time:** 5 hours
+**Priority:** High
+**Dependencies:** [190,191]
+
+**Objective:**
+Finalize GA launch tasks and set up intensified post-launch monitoring and triage.
+
+**Technical Requirements:**
+- Launch checklist and owners
+- Post-launch war room
+
+**Implementation Steps:**
+1. Finalize GA checklist and owners.
+2. Enable heightened alert thresholds post-launch.
+3. Set up triage rotations and playbooks.
+
+**Files to Create/Modify:**
+- `docs/DEPLOYMENT_CHECKLIST.md`
+- `docs/runbooks/post-launch.md`
+
+**Acceptance Criteria:**
+- [ ] Launch complete with owners
+- [ ] Post-launch monitoring active
+
+**Testing Strategy:**
+- War room dry-run
+
+**Potential Challenges:**
+- Coordinated response to early issues
+
+**Reference Documentation:**
+- PRD "Launch"
+
+---
+
+### Task 211: Export Signing and Provenance
+**Phase:** Production Polish
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [110,156]
+
+**Objective:**
+Sign export artifacts and attach provenance metadata for integrity verification.
+
+**Technical Requirements:**
+- Signature generation and verification
+- Provenance manifest
+
+**Implementation Steps:**
+1. Generate signatures for export bundles.
+2. Include provenance manifest with hashes and timestamps.
+3. Add verification utility.
+
+**Files to Create/Modify:**
+- `src/lib/export/signing.ts`
+- `src/lib/export/provenance.ts`
+
+**Acceptance Criteria:**
+- [ ] Bundles include signatures and provenance
+- [ ] Verification tool validates integrity
+
+**Testing Strategy:**
+- Signature verification tests
+
+**Potential Challenges:**
+- Key management and rotation
+
+**Reference Documentation:**
+- PRD "Export System"
+
+---
+
+### Task 212: Editor Telemetry Sampler and Privacy Controls
+**Phase:** Production Polish
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [184,188]
+
+**Objective:**
+Sample editor telemetry with opt-in consent and clear controls, minimizing PII.
+
+**Technical Requirements:**
+- Sampling config
+- Consent and privacy controls
+
+**Implementation Steps:**
+1. Add telemetry sampler with dynamic rates.
+2. Add consent UI and privacy settings.
+3. Anonymize identifiers in events.
+
+**Files to Create/Modify:**
+- `src/lib/observability/telemetry.ts`
+- `src/modules/settings/privacy.page.tsx`
+
+**Acceptance Criteria:**
+- [ ] Users control telemetry participation
+- [ ] Events are privacy-safe
+
+**Testing Strategy:**
+- Consent flow tests
+
+**Potential Challenges:**
+- Balancing insight and privacy
+
+**Reference Documentation:**
+- PRD "Privacy"
+
+---
+
+### Task 213: Diagram Archival and Cold Storage
+**Phase:** Production Polish
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [149,192]
+
+**Objective:**
+Allow archiving inactive diagrams to cold storage with quick restore.
+
+**Technical Requirements:**
+- Archive lifecycle policies
+- Restore workflow
+
+**Implementation Steps:**
+1. Add archive action and move assets to cold storage.
+2. List archived diagrams with restore option.
+3. Track storage savings and status.
+
+**Files to Create/Modify:**
+- `src/modules/diagram/archive.page.tsx`
+- `src/lib/storage/cold.ts`
+
+**Acceptance Criteria:**
+- [ ] Archived diagrams reduce costs
+- [ ] Restore completes reliably
+
+**Testing Strategy:**
+- Archive/restore scenario tests
+
+**Potential Challenges:**
+- Latency for cold storage retrieval
+
+**Reference Documentation:**
+- PRD "Operations"
+
+---
+
+### Task 214: Editor Performance Labs (Scenarios and Fixtures)
+**Phase:** Production Polish
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [181,139]
+
+**Objective:**
+Provide reproducible performance scenarios and fixtures for local and CI.
+
+**Technical Requirements:**
+- Fixture generator
+- Scenario runner
+
+**Implementation Steps:**
+1. Generate large-graph fixtures with parameters.
+2. Add scenario runner to measure key metrics.
+3. Publish baseline results in repo.
+
+**Files to Create/Modify:**
+- `src/lib/perf/fixtures.ts`
+- `tests/performance/scenarios/*.ts`
+
+**Acceptance Criteria:**
+- [ ] Perf regressions reproducible locally
+- [ ] Baselines documented
+
+**Testing Strategy:**
+- Automated perf scenario runs
+
+**Potential Challenges:**
+- CI variability
+
+**Reference Documentation:**
+- PRD "Performance"
+
+---
+
+### Task 215: Design Tokens Source of Truth and Sync
+**Phase:** Production Polish
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [168]
+
+**Objective:**
+Create single source of truth for design tokens and sync to code, docs, and exports.
+
+**Technical Requirements:**
+- Token registry and sync
+- CI validation of token changes
+
+**Implementation Steps:**
+1. Establish token registry with schema.
+2. Sync tokens to code and docs.
+3. Validate token changes in CI.
+
+**Files to Create/Modify:**
+- `tokens/*.json`
+- `src/lib/theme/schema.ts`
+
+**Acceptance Criteria:**
+- [ ] Tokens update propagate reliably
+- [ ] Invalid changes blocked
+
+**Testing Strategy:**
+- Token sync dry-runs
+
+**Potential Challenges:**
+- Token drift across surfaces
+
+**Reference Documentation:**
+- PRD "Theming"
+
+---
+
+### Task 216: Real-time Incident Status Page
+**Phase:** Production Polish
+**Estimated Time:** 4 hours
+**Priority:** Medium
+**Dependencies:** [185,191]
+
+**Objective:**
+Expose public status page with component/subsystem health and incident updates.
+
+**Technical Requirements:**
+- Component health aggregation
+- Incident posting workflow
+
+**Implementation Steps:**
+1. Aggregate health from monitoring.
+2. Render public status page.
+3. Add incident update posting tools.
+
+**Files to Create/Modify:**
+- `src/app/status/page.tsx`
+- `src/lib/observability/health.ts`
+
+**Acceptance Criteria:**
+- [ ] Status page reflects real-time health
+- [ ] Incidents post updates
+
+**Testing Strategy:**
+- Simulated incident tests
+
+**Potential Challenges:**
+- Avoid exposing sensitive info
+
+**Reference Documentation:**
+- PRD "Operations"
+
+---
+
+### Task 217: Cost Monitoring and Optimization
+**Phase:** Production Polish
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [184,169]
+
+**Objective:**
+Track and optimize operational costs for AI, storage, and compute.
+
+**Technical Requirements:**
+- Cost attribution by feature
+- Optimization recommendations
+
+**Implementation Steps:**
+1. Attribute costs per feature/module.
+2. Visualize spend trends and anomalies.
+3. Suggest optimizations with projected savings.
+
+**Files to Create/Modify:**
+- `src/lib/observability/costs.ts`
+- `src/modules/admin/costs.page.tsx`
+
+**Acceptance Criteria:**
+- [ ] Cost trends visible
+- [ ] Recommendations actionable
+
+**Testing Strategy:**
+- Synthetic cost data tests
+
+**Potential Challenges:**
+- Attribution accuracy
+
+**Reference Documentation:**
+- PRD "Operations"
+
+---
+
+### Task 218: Export Branding and White-Labeling
+**Phase:** Production Polish
+**Estimated Time:** 4 hours
+**Priority:** Medium
+**Dependencies:** [168,156]
+
+**Objective:**
+Allow tenants to white-label exports (logos, colors, footer notes) via theme tokens.
+
+**Technical Requirements:**
+- Tenant theme tokens
+- Branding injection in exports
+
+**Implementation Steps:**
+1. Add tenant-level theme overrides.
+2. Inject branding into export templates.
+3. Preview branding in export UI.
+
+**Files to Create/Modify:**
+- `src/lib/theme/tenants.ts`
+- `templates/export/*.mdx`
+
+**Acceptance Criteria:**
+- [ ] Branding applies consistently
+- [ ] No token collisions across tenants
+
+**Testing Strategy:**
+- Multi-tenant branding tests
+
+**Potential Challenges:**
+- Conflicting tenant tokens
+
+**Reference Documentation:**
+- PRD "Branding"
+
+---
+
+### Task 219: Advanced Undo History with Labels and Bookmarks
+**Phase:** Production Polish
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [046,077]
+
+**Objective:**
+Enhance undo/redo with labeled checkpoints and bookmarks to jump between milestones.
+
+**Technical Requirements:**
+- Labeled snapshots
+- Bookmark navigation
+
+**Implementation Steps:**
+1. Add labeled snapshots at key operations.
+2. Implement bookmark manager UI.
+3. Jump to labeled states reliably.
+
+**Files to Create/Modify:**
+- `src/lib/editor/history.ts`
+- `src/modules/diagram/components/history-panel.tsx`
+
+**Acceptance Criteria:**
+- [ ] Users can label and jump to states
+- [ ] History remains performant
+
+**Testing Strategy:**
+- History navigation tests
+
+**Potential Challenges:**
+- Snapshot size management
+
+**Reference Documentation:**
+- PRD "Editor UX"
+
+---
+
+### Task 220: Knowledge Base and Tips In-App
+**Phase:** Production Polish
+**Estimated Time:** 4 hours
+**Priority:** Medium
+**Dependencies:** [142,198]
+
+**Objective:**
+Provide searchable in-app knowledge base with tips, shortcuts, and how-tos.
+
+**Technical Requirements:**
+- Indexed KB content
+- Contextual tips
+
+**Implementation Steps:**
+1. Build KB index and search.
+2. Surface contextual tips in relevant UIs.
+3. Link to docs and examples.
+
+**Files to Create/Modify:**
+- `src/modules/help/kb.page.tsx`
+- `src/lib/help/tips.ts`
+
+**Acceptance Criteria:**
+- [ ] Users can find answers quickly
+- [ ] Tips reduce support load
+
+**Testing Strategy:**
+- KB search tests
+
+**Potential Challenges:**
+- Content freshness
+
+**Reference Documentation:**
+- PRD "Help and Docs"
+
+---
+
+### Task 221: Tenant-Level Webhooks and Event Subscriptions
+**Phase:** Production Polish
+**Estimated Time:** 6 hours
+**Priority:** Medium
+**Dependencies:** [204,187]
+
+**Objective:**
+Allow tenants to subscribe to workspace events (project created, export completed, share link created).
+
+**Technical Requirements:**
+- Event bus and subscriptions
+- Delivery retries and signing
+
+**Implementation Steps:**
+1. Define event types and bus.
+2. Build subscription management UI.
+3. Deliver signed events with retries.
+
+**Files to Create/Modify:**
+- `src/lib/events/bus.ts`
+- `src/modules/admin/webhooks.page.tsx`
+
+**Acceptance Criteria:**
+- [ ] Tenants manage subscriptions
+- [ ] Events delivered reliably
+
+**Testing Strategy:**
+- Webhook delivery tests
+
+**Potential Challenges:**
+- Event ordering and duplication
+
+**Reference Documentation:**
+- PRD "Integrations"
+
+---
+
+### Task 222: Export Lint and Preflight Checks
+**Phase:** Production Polish
+**Estimated Time:** 4 hours
+**Priority:** Medium
+**Dependencies:** [144,165]
+
+**Objective:**
+Add preflight checks that warn/block exports with missing data, a11y issues, or validation failures.
+
+**Technical Requirements:**
+- Preflight pipeline
+- Blocker vs warning severity
+
+**Implementation Steps:**
+1. Implement preflight checks integrated with quality control.
+2. Show actionable warnings/errors before export.
+3. Allow override with audit note when permitted.
+
+**Files to Create/Modify:**
+- `src/lib/export/preflight.ts`
+- `src/modules/export/components/preflight.tsx`
+
+**Acceptance Criteria:**
+- [ ] Exports catch issues early
+- [ ] Overrides are audited
+
+**Testing Strategy:**
+- Preflight scenario tests
+
+**Potential Challenges:**
+- False positives creating friction
+
+**Reference Documentation:**
+- PRD "Export System"
+
+---
+
+### Task 223: In-App Release Channel Switcher (Stable/Beta)
+**Phase:** Production Polish
+**Estimated Time:** 4 hours
+**Priority:** Medium
+**Dependencies:** [185,190]
+
+**Objective:**
+Let users opt into Beta channel for early features with clear disclaimers.
+
+**Technical Requirements:**
+- Channel selection and gating
+- Beta flag controls
+
+**Implementation Steps:**
+1. Add release channel setting per user/workspace.
+2. Gate Beta features behind flags.
+3. Provide downgrade path to Stable.
+
+**Files to Create/Modify:**
+- `src/lib/flags/channels.ts`
+- `src/modules/settings/settings.page.tsx`
+
+**Acceptance Criteria:**
+- [ ] Users switch channels safely
+- [ ] Flags gate features correctly
+
+**Testing Strategy:**
+- Channel switch e2e tests
+
+**Potential Challenges:**
+- Migrating Beta data back to Stable
+
+**Reference Documentation:**
+- PRD "Release Management"
+
+---
+
+### Task 224: Data Retention Policies and Purge Jobs
+**Phase:** Production Polish
+**Estimated Time:** 5 hours
+**Priority:** Medium
+**Dependencies:** [193,167]
+
+**Objective:**
+Implement retention policies and automated purge jobs for stale data.
+
+**Technical Requirements:**
+- Policy engine and scheduler
+- Safe purge with audit
+
+**Implementation Steps:**
+1. Define retention policies per data type.
+2. Schedule purge jobs with dry-run mode.
+3. Audit purges and notify admins.
+
+**Files to Create/Modify:**
+- `src/lib/compliance/retention.ts`
+- `scripts/purge.ts`
+
+**Acceptance Criteria:**
+- [ ] Purges run safely and transparently
+- [ ] Policies configurable per tenant
+
+**Testing Strategy:**
+- Dry-run tests and audits
+
+**Potential Challenges:**
+- Avoiding accidental data loss
+
+**Reference Documentation:**
+- PRD "Compliance"
+
+---
+
+### Task 225: Offline Documentation Bundle
+**Phase:** Production Polish
+**Estimated Time:** 4 hours
+**Priority:** Low
+**Dependencies:** [189,200]
+
+**Objective:**
+Provide downloadable offline docs bundle for air-gapped environments.
+
+**Technical Requirements:**
+- Static docs export
+- Searchable offline index
+
+**Implementation Steps:**
+1. Generate static docs site bundle.
+2. Include offline search index.
+3. Link bundle from docs site.
+
+**Files to Create/Modify:**
+- `docs/offline/*`
+- `scripts/build-docs-offline.ts`
+
+**Acceptance Criteria:**
+- [ ] Docs usable offline
+- [ ] Search works without network
+
+**Testing Strategy:**
+- Offline validation
+
+**Potential Challenges:**
+- Keeping offline bundle current
+
+**Reference Documentation:**
+- PRD "Documentation"
+
+---
+
+### Task 226: UI Theming for High-Contrast and Dyslexia-Friendly Modes
+**Phase:** Production Polish
+**Estimated Time:** 4 hours
+**Priority:** Medium
+**Dependencies:** [069,168]
+
+**Objective:**
+Add high-contrast and dyslexia-friendly UI modes with saved preferences.
+
+**Technical Requirements:**
+- Alternate theme tokens
+- Preference persistence
+
+**Implementation Steps:**
+1. Define alternate token sets.
+2. Add toggle in accessibility settings.
+3. Persist preference per user.
+
+**Files to Create/Modify:**
+- `tokens/accessibility/*.json`
+- `src/modules/settings/accessibility.page.tsx`
+
+**Acceptance Criteria:**
+- [ ] Modes meet a11y standards
+- [ ] Preferences persist
+
+**Testing Strategy:**
+- A11y validation tests
+
+**Potential Challenges:**
+- Visual parity with default theme
+
+**Reference Documentation:**
+- PRD "Accessibility"
+
+---
+
+### Task 227: Automated Cleanup of Orphaned Assets
+**Phase:** Production Polish
+**Estimated Time:** 4 hours
+**Priority:** Medium
+**Dependencies:** [195]
+
+**Objective:**
+Detect and clean up orphaned storage assets safely with dry-run mode.
+
+**Technical Requirements:**
+- Asset-reference scanner
+- Dry-run and audit
+
+**Implementation Steps:**
+1. Scan storage for unreferenced assets.
+2. Present review list to admins.
+3. Purge after confirmation with audit trail.
+
+**Files to Create/Modify:**
+- `scripts/asset-cleanup.ts`
+- `src/lib/storage/references.ts`
+
+**Acceptance Criteria:**
+- [ ] Orphans detected reliably
+- [ ] Deletions audited with dry-run option
+
+**Testing Strategy:**
+- Dry-run and sample purge tests
+
+**Potential Challenges:**
+- Avoiding false positives
+
+**Reference Documentation:**
+- PRD "Operations"
+
+---
+
+### Task 228: Export Diff-to-Issue Automation
+**Phase:** Production Polish
+**Estimated Time:** 4 hours
+**Priority:** Medium
+**Dependencies:** [173,200]
+
+**Objective:**
+Automatically open issues or tasks from export diff reports for follow-ups.
+
+**Technical Requirements:**
+- Issue tracker integration
+- Mapping diffs to issue templates
+
+**Implementation Steps:**
+1. Parse diff report and extract actionable items.
+2. Create issues via API with templates.
+3. Link back to diagram/milestone.
+
+**Files to Create/Modify:**
+- `src/lib/integrations/issues.ts`
+- `scripts/diff-to-issues.ts`
+
+**Acceptance Criteria:**
+- [ ] Issues reflect diff items
+- [ ] Links aid triage
+
+**Testing Strategy:**
+- Dry-run on sample diffs
+
+**Potential Challenges:**
+- Noise vs signal calibration
+
+**Reference Documentation:**
+- PRD "Release Management"
+
+---
+
+### Task 229: Multi-Tenant Data Isolation Validation Suite
+**Phase:** Production Polish
+**Estimated Time:** 5 hours
+**Priority:** High
+**Dependencies:** [167,186]
+
+**Objective:**
+Create a validation suite to ensure strict tenant data isolation across APIs and storage.
+
+**Technical Requirements:**
+- Cross-tenant access tests
+- Storage isolation checks
+
+**Implementation Steps:**
+1. Add cross-tenant API tests.
+2. Validate storage bucket/object isolation.
+3. Run suite in CI on merges.
+
+**Files to Create/Modify:**
+- `tests/isolation/*.ts`
+- `.github/workflows/security.yml`
+
+**Acceptance Criteria:**
+- [ ] No cross-tenant leakage
+- [ ] CI blocks on isolation failures
+
+**Testing Strategy:**
+- Automated isolation tests
+
+**Potential Challenges:**
+- Comprehensive coverage
+
+**Reference Documentation:**
+- PRD "Security"
+
+---
+
+### Task 230: GA Postmortem and Roadmap Next Cycle
+**Phase:** Production Polish
+**Estimated Time:** 4 hours
+**Priority:** Medium
+**Dependencies:** [210]
+
+**Objective:**
+Hold a GA postmortem, publish learnings, and define the next cycle roadmap.
+
+**Technical Requirements:**
+- Postmortem facilitation
+- Roadmap planning doc
+
+**Implementation Steps:**
+1. Run structured postmortem with actions and owners.
+2. Publish learnings and metrics.
+3. Draft next-cycle roadmap and priorities.
+
+**Files to Create/Modify:**
+- `docs/postmortems/ga.md`
+- `docs/ROADMAP.md`
+
+**Acceptance Criteria:**
+- [ ] Learnings published with actions
+- [ ] Roadmap drafted
+
+**Testing Strategy:**
+- N/A (process)
+
+**Potential Challenges:**
+- Aligning stakeholders on priorities
+
+**Reference Documentation:**
+- PRD "Planning"
+
+---
 
 ## Appendix
+
 ### Task Index by Category
-(To be generated after full task set is complete.)
+
+#### Foundation & Infrastructure (23 tasks)
+- 001: Initialize Cloudflare SaaS Stack Baseline
+- 002: Configure D1 Database and Drizzle ORM
+- 003: Implement Initial Schema (Projects, Diagrams)
+- 004: Auth Foundation with Better Auth
+- 005: App Router Base Routes and Layouts
+- 006: Dashboard Shell and Navigation
+- 026: Theme Config and Styling Baseline
+- 027: Error Handling and API Error Utility
+- 028: Validation Constants and Zod Schemas
+- 043: Durable Object Worker Skeleton
+- 044: Diagram Update Broadcast Hook (Stub)
+- 045: Rate Limiting for AI Endpoints
+- 128: Security Review for File Imports
+- 138: Advanced Diagram Security and Audit
+- 174: Compliance Mode (PII Redaction and Logging)
+- 181: Performance Budget and Thresholds
+- 184: Observability: Tracing, Metrics, and Logs
+- 185: Deployment Hardening and Rollback Strategy
+- 186: Security Hardening and Pen Test Fixes
+- 191: SLA Monitoring and Incident Runbooks
+- 192: Backups and Restore Procedures
+- 201: SSO (SAML/OIDC) Enterprise Readiness
+- 229: Multi-Tenant Data Isolation Validation Suite
+
+#### Project & Diagram Management (15 tasks)
+- 007: Projects CRUD (Minimal)
+- 008: Diagrams CRUD (Minimal)
+- 051: Project Management UI Enhancement
+- 052: Diagram List and Management
+- 062: Diagram Templates and Presets
+- 064: Diagram Search and Filtering
+- 077: Diagram Versioning System
+- 089: Diagram Sharing and Permissions
+- 091: Diagram Templates Marketplace
+- 097: Diagram Backup and Recovery
+- 107: Diagram Template Validation
+- 149: Diagram Milestones and Releases
+- 150: Template Marketplace (Private)
+- 196: Diagram Snapshot Diff Viewer in App
+- 213: Diagram Archival and Cold Storage
+
+#### React Flow Canvas & Nodes (28 tasks)
+- 009: React Flow Canvas Bootstrap
+- 010: Zustand Store for Diagram State
+- 011: Custom Node Types — UI Component
+- 012: Custom Node Types — API Endpoint
+- 013: Custom Node Types — Database/Service/Infra
+- 014: Custom Edge Types and Styling
+- 015: Diagram Toolbar and Controls
+- 031: Selection and Multi-Select on Canvas
+- 032: Drag-and-Drop from Sidebar Palette
+- 033: Node Properties Panel (Right Sidebar)
+- 034: Group/Container Node Type
+- 035: Collapsible Groups and Badges
+- 036: Minimap and Grid/Snap Settings
+- 037: Basic Auto-Layout Integration (Optional Toggle)
+- 038: Diagram Header and Actions
+- 046: Undo/Redo Basics
+- 047: Keyboard Shortcuts
+- 078: Advanced Auto-Layout Algorithms
+- 079: Advanced Edge Routing and Styling
+- 086: Advanced Node Grouping and Containers
+- 093: Diagram Performance Optimization
+- 122: Advanced Diagram Layout Algorithms
+- 139: Advanced Performance Optimization
+- 146: Advanced Auto-Layout Heuristics and User Overrides
+- 152: Large Graph Pagination and Windowing
+- 161: Advanced Edge Routing with Obstacles
+- 172: Component Library Extraction for Nodes/Edges
+- 219: Advanced Undo History with Labels and Bookmarks
+
+#### AI Integration & Agents (29 tasks)
+- 016: Basic PRD Analysis API Route Skeleton
+- 017: Anthropic Client Setup and Env Wiring
+- 018: PRDAnalysisAgent Implementation (Parse + Map Types)
+- 040: AI Conversation Panel Skeleton
+- 041: Conversation Persistence Model
+- 042: AI Analyses Storage
+- 055: Advanced Chat UI Components
+- 056: Message Input Handling and Validation
+- 057: Message History and Pagination
+- 058: AI Response Streaming Implementation
+- 059: Context Management for AI Conversations
+- 061: AI Recommendations Panel
+- 076: Advanced AI Agent System
+- 092: Advanced AI Context Management
+- 121: Advanced AI Agent Coordination
+- 125: Advanced AI Recommendation System
+- 129: Streaming AI Middleware Retry/Backoff
+- 148: AI Plan-to-Canvas Command Execution
+- 151: AI Recommendation Feedback Loop
+- 158: AI Conversation Transcript Export
+- 166: Multi-Agent Conflict Explanation UI
+- 175: AI Test Case Generator for E2E
+- 176: Auto-Resolve Suggestions from Agent Confidence
+- 179: AI Refactoring Suggestions for Diagram Hygiene
+- 020: PRD Import UI (Paste + Upload Shell)
+- 050: TXT/MD Import Parsing (MVP)
+- 060: File Upload for PRD Import
+- 094: Advanced Import Validation
+- 108: Advanced Import Error Recovery
+
+#### Real-time Collaboration (14 tasks)
+- 071: Real-time Collaboration WebSocket Client
+- 072: Presence and Cursor Tracking
+- 073: Conflict Resolution for Real-time Edits
+- 082: Diagram Collaboration Comments
+- 087: Real-time Collaboration Presence System
+- 096: Advanced Collaboration Features
+- 115: Diagram Collaboration Conflict Resolution
+- 117: Diagram Collaboration Permissions
+- 119: Diagram Collaboration Scalability
+- 123: Advanced Real-time Collaboration
+- 132: Presence Service Scalability (Durable Objects)
+- 145: Advanced Collaboration Scalability
+- 147: Offline-First Collaboration Queue
+- 171: Advanced Presence Visualizations
+
+#### Export System (20 tasks)
+- 021: Export Engine Skeleton
+- 022: Markdown Export Implementation
+- 023: JSON Export Implementation
+- 024: Cursor Tasks Export Implementation
+- 025: API Route for Exports
+- 039: Export Controls UI
+- 065: Export History and Management
+- 074: PDF Export Implementation
+- 075: PNG/SVG Export Implementation
+- 083: Advanced Export Templates
+- 090: Advanced Export Options
+- 100: Advanced Export Customization
+- 110: Advanced Export Quality Control
+- 116: Advanced Export Format Support
+- 124: Advanced Export System
+- 131: Export Template DSL Enhancements
+- 144: Advanced Export Quality Control
+- 156: Export to PDF/PNG Quality and Typography Polish
+- 195: Export Pipeline Caching and Incremental Builds
+- 211: Export Signing and Provenance
+
+#### Import System (9 tasks)
+- 019: Import Session Persistence
+- 020: PRD Import UI (Paste + Upload Shell)
+- 050: TXT/MD Import Parsing (MVP)
+- 060: File Upload for PRD Import
+- 084: Diagram Import from External Tools
+- 094: Advanced Import Validation
+- 108: Advanced Import Error Recovery
+- 134: Import Mapping Review and Corrections UI
+- 170: Import Connectors for External Tools (Beta)
+
+#### Validation & Quality (10 tasks)
+- 049: Refine Validation and Types for Diagram IO
+- 070: Data Validation and Sanitization
+- 088: Advanced Diagram Validation
+- 106: Advanced Diagram Validation Rules
+- 126: Graph Consistency Validator
+- 143: Advanced Diagram Validation Rules Engine
+- 154: Diagram Linting and Best Practices Hints
+- 165: Export Accessibility Audit
+- 222: Export Lint and Preflight Checks
+- 228: Export Diff-to-Issue Automation
+
+#### Analytics & Monitoring (11 tasks)
+- 068: Performance Monitoring and Optimization
+- 080: Diagram Analytics and Insights
+- 095: Diagram Analytics Dashboard
+- 103: Diagram Performance Monitoring
+- 109: Diagram Collaboration Analytics
+- 113: Diagram Performance Benchmarking
+- 118: Advanced Diagram Analytics
+- 127: Performance Profiling Hooks for Canvas
+- 136: Advanced Diagram Analytics and Insights
+- 157: Diagram Metrics Web Vitals Dashboard
+- 209: Admin Analytics for Tenant Usage
+
+#### User Experience & Accessibility (15 tasks)
+- 029: Login/Signup Forms Using Better Auth
+- 030: Protected Dashboard Routes and Redirects
+- 048: Loading and Error States (Canvas and Panels)
+- 053: User Settings and Profile Management
+- 054: Responsive Design Implementation
+- 066: Keyboard Shortcuts Enhancement
+- 067: Error Boundary and Recovery
+- 069: Accessibility Improvements
+- 085: Advanced User Preferences
+- 102: Advanced Error Handling
+- 114: Advanced User Onboarding
+- 140: Advanced Error Recovery and Resilience
+- 142: Advanced User Onboarding and Help System
+- 182: Error Taxonomy and User-Facing Messaging
+- 183: Accessibility Audit and Fixes (App-wide)
+
+#### Notifications & Communication (5 tasks)
+- 105: Diagram Collaboration Notifications
+- 137: Advanced Collaboration Notifications
+- 177: Live Co-Editing Cursor Chat
+- 198: Customer Support and Feedback Hooks
+- 220: Knowledge Base and Tips In-App
+
+#### Integrations & Webhooks (6 tasks)
+- 101: Diagram Integration APIs
+- 153: Secure Sharing Links with Expiry and Scopes
+- 204: Export Webhooks and Integrations
+- 207: Fine-Grained Permissions and Sharing Policies
+- 221: Tenant-Level Webhooks and Event Subscriptions
+- 228: Export Diff-to-Issue Automation
+
+#### Settings & Configuration (6 tasks)
+- 053: User Settings and Profile Management
+- 085: Advanced User Preferences
+- 155: Project/Workspace Settings and Policies
+- 168: Diagram Theming API
+- 188: Internationalization (i18n) Foundation
+- 215: Design Tokens Source of Truth and Sync
+
+#### Testing & Quality Assurance (6 tasks)
+- 111: Diagram Integration Testing
+- 120: Phase 2 Integration Testing
+- 141: Advanced Integration Testing Framework
+- 175: AI Test Case Generator for E2E
+- 180: Phase 3 Hardening and Integration Pass
+- 214: Editor Performance Labs (Scenarios and Fixtures)
+
+#### Billing & Plans (3 tasks)
+- 169: API Rate Plan and Usage Quotas
+- 187: Billing and Plan Enforcement Polish
+- 194: Rate Limit Dashboards and Self-Service Unblock
+
+#### Documentation & Release (8 tasks)
+- 163: Workspace Audit Dashboard
+- 173: Export Diff Reports Between Milestones
+- 178: Dependency Graph for Tasks and Modules
+- 189: Documentation Polish and Examples Gallery
+- 199: Onboarding Checklists and Templates
+- 200: Release Notes and Changelog Automation
+- 225: Offline Documentation Bundle
+- 230: GA Postmortem and Roadmap Next Cycle
+
+#### Production & Operations (17 tasks)
+- 190: Production Readiness Checklist Completion
+- 193: Privacy Policy and Data Deletion Flows
+- 202: Audit Exports and Legal Hold
+- 203: Disaster Recovery Game Days
+- 205: Multi-Region Failover (Read-Only Mode)
+- 206: End-User Data Export (Self-Service)
+- 208: Diagram Printing Mode and Page Tiling
+- 210: GA Launch Checklist and Post-Launch Monitoring
+- 212: Editor Telemetry Sampler and Privacy Controls
+- 216: Real-time Incident Status Page
+- 217: Cost Monitoring and Optimization
+- 218: Export Branding and White-Labeling
+- 223: In-App Release Channel Switcher (Stable/Beta)
+- 224: Data Retention Policies and Purge Jobs
+- 226: UI Theming for High-Contrast and Dyslexia-Friendly Modes
+- 227: Automated Cleanup of Orphaned Assets
+- 167: Data Residency and Region Selection
+
+#### Specialized Features (6 tasks)
+- 130: Diagram Diff and Merge Utilities
+- 133: Node Library Presets and Governance
+- 135: Autosave and Recovery Strategy
+- 159: Editor Plugin System (Beta)
+- 160: Multi-Project Export Bundles
+- 162: Review Mode and Suggestions
+
+#### Miscellaneous & Polish (3 tasks)
+- 164: Advanced Keyboard Macro System
+- 197: Mobile and Tablet UX Polish
+- 098: Advanced Search Integration
+
+---
 
 ### Critical Path Tasks
-(To be generated after dependency mapping.)
+
+**These tasks must be completed in order and block other work. Any delay in critical path tasks delays the entire project.**
+
+#### Phase 1 Critical Path (Foundation)
+1. **Task 001** - Initialize Cloudflare SaaS Stack Baseline
+   - Blocks: All other tasks
+   - Duration: 6 hours
+   - Next: 002, 004, 005
+
+2. **Task 002** - Configure D1 Database and Drizzle ORM
+   - Blocks: All database operations (003, 007, 008, 019, 041, 042)
+   - Duration: 6 hours
+   - Next: 003
+
+3. **Task 003** - Implement Initial Schema (Projects, Diagrams)
+   - Blocks: All CRUD operations
+   - Duration: 6 hours
+   - Next: 007, 008
+
+4. **Task 004** - Auth Foundation with Better Auth
+   - Blocks: All protected routes and API endpoints
+   - Duration: 6 hours
+   - Next: 005, 016, 029, 030
+
+5. **Task 009** - React Flow Canvas Bootstrap
+   - Blocks: All canvas-related features (010-015, 031-038)
+   - Duration: 6 hours
+   - Next: 010, 011
+
+6. **Task 010** - Zustand Store for Diagram State
+   - Blocks: All state management features
+   - Duration: 5 hours
+   - Next: 033, 046
+
+#### Phase 2 Critical Path (Core Features)
+7. **Task 016** - Basic PRD Analysis API Route Skeleton
+   - Blocks: All AI features (017, 018, 040, 055-059)
+   - Duration: 5 hours
+   - Next: 017
+
+8. **Task 017** - Anthropic Client Setup and Env Wiring
+   - Blocks: All AI agent implementations
+   - Duration: 4 hours
+   - Next: 018
+
+9. **Task 018** - PRDAnalysisAgent Implementation
+   - Blocks: Import system, AI recommendations
+   - Duration: 7 hours
+   - Next: 019, 020, 040, 061
+
+10. **Task 071** - Real-time Collaboration WebSocket Client
+    - Blocks: All collaboration features (072, 073, 082, 087)
+    - Duration: 7 hours
+    - Next: 072
+
+#### Phase 3 Critical Path (Advanced Features)
+11. **Task 121** - Advanced AI Agent Coordination
+    - Blocks: Multi-agent features (148, 166, 176)
+    - Duration: 8 hours
+    - Next: 148
+
+12. **Task 123** - Advanced Real-time Collaboration
+    - Blocks: Scalability features (145, 147)
+    - Duration: 8 hours
+    - Next: 145
+
+#### Phase 4 Critical Path (Production)
+13. **Task 181** - Performance Budget and Thresholds
+    - Blocks: Production launch (190, 210)
+    - Duration: 5 hours
+    - Next: 184
+
+14. **Task 184** - Observability: Tracing, Metrics, and Logs
+    - Blocks: Production monitoring
+    - Duration: 7 hours
+    - Next: 191
+
+15. **Task 186** - Security Hardening and Pen Test Fixes
+    - Blocks: Production launch
+    - Duration: 8 hours
+    - Next: 190
+
+16. **Task 190** - Production Readiness Checklist Completion
+    - Blocks: GA launch
+    - Duration: 5 hours
+    - Next: 210
+
+17. **Task 210** - GA Launch Checklist and Post-Launch Monitoring
+    - Final critical task
+    - Duration: 5 hours
+    - Next: 230
+
+**Total Critical Path Duration:** ~94 hours (~12 working days with parallel work)
+
+---
 
 ### Quick Reference Checklist
-(To be generated after full task set is complete.)
+
+#### Week 1-2: Foundation Setup
+- [ ] Task 001 - Cloudflare SaaS Stack initialized
+- [ ] Task 002 - D1 database configured
+- [ ] Task 003 - Core schema implemented
+- [ ] Task 004 - Authentication working
+- [ ] Task 005 - App Router routes created
+- [ ] Task 006 - Dashboard shell rendered
+- [ ] Task 029 - Login/signup functional
+- [ ] Task 030 - Route protection working
+
+#### Week 2-3: Canvas & CRUD
+- [ ] Task 007 - Projects CRUD operational
+- [ ] Task 008 - Diagrams CRUD operational
+- [ ] Task 009 - React Flow canvas rendering
+- [ ] Task 010 - Zustand store managing state
+- [ ] Task 011-013 - Custom nodes rendering
+- [ ] Task 014 - Custom edges working
+- [ ] Task 015 - Toolbar and controls functional
+
+#### Week 3-4: AI Foundation
+- [ ] Task 016 - AI API routes scaffolded
+- [ ] Task 017 - Anthropic client configured
+- [ ] Task 018 - PRD analysis agent working
+- [ ] Task 019 - Import sessions persisted
+- [ ] Task 020 - PRD import UI functional
+- [ ] Task 026 - Theme system implemented
+- [ ] Task 027 - Error handling standardized
+- [ ] Task 028 - Validation schemas defined
+
+#### Week 4-5: Advanced Canvas & AI Chat
+- [ ] Task 031-038 - Canvas interactions polished
+- [ ] Task 040-042 - AI chat functional
+- [ ] Task 043-044 - Durable Objects scaffolded
+- [ ] Task 045 - Rate limiting active
+- [ ] Task 046-047 - Undo/redo & shortcuts working
+- [ ] Task 048-049 - Error/loading states added
+
+#### Week 5-6: Import & Export
+- [ ] Task 050 - TXT/MD parsing working
+- [ ] Task 021-025 - Export engine functional
+- [ ] Task 033 - Properties panel operational
+- [ ] Task 034-035 - Groups/containers working
+- [ ] Task 036-037 - Minimap & auto-layout added
+- [ ] Task 039 - Export controls accessible
+
+#### Week 6-7: UI Polish & Advanced Features
+- [ ] Task 051-054 - Project/diagram UI enhanced
+- [ ] Task 055-059 - Advanced chat features added
+- [ ] Task 060-061 - File upload & AI recommendations
+- [ ] Task 062-066 - Templates, search, shortcuts
+- [ ] Task 067-070 - Error handling & validation enhanced
+
+#### Week 7-8: Collaboration & Advanced AI
+- [ ] Task 071-073 - Real-time collaboration working
+- [ ] Task 074-075 - PDF/PNG export functional
+- [ ] Task 076 - Advanced AI agents implemented
+- [ ] Task 077-080 - Versioning & analytics added
+- [ ] Task 082-086 - Comments & grouping enhanced
+- [ ] Task 087-090 - Presence & export options
+
+#### Week 8-9: Marketplace & Integrations
+- [ ] Task 091-095 - Template marketplace operational
+- [ ] Task 096-100 - Collaboration & export advanced
+- [ ] Task 101-105 - Integration APIs & notifications
+- [ ] Task 106-110 - Validation & quality control
+- [ ] Task 111-115 - Testing & conflict resolution
+
+#### Week 9-10: Advanced Features Complete
+- [ ] Task 116-120 - Export formats & Phase 2 testing
+- [ ] Task 121-125 - AI coordination & recommendations
+- [ ] Task 126-130 - Validation & diff utilities
+- [ ] Task 131-135 - Templates & autosave enhanced
+- [ ] Task 136-140 - Analytics & error recovery
+
+#### Week 10-11: Final Features & Testing
+- [ ] Task 141-145 - Testing framework & scalability
+- [ ] Task 146-150 - Layout & marketplace features
+- [ ] Task 151-155 - Feedback & settings enhanced
+- [ ] Task 156-160 - Export quality & plugins
+- [ ] Task 161-165 - Routing & accessibility
+- [ ] Task 166-170 - Agent UI & import connectors
+
+#### Week 11-12: Production Hardening
+- [ ] Task 171-175 - Presence & AI testing
+- [ ] Task 176-180 - Auto-resolve & Phase 3 complete
+- [ ] Task 181-185 - Performance & deployment ready
+- [ ] Task 186-190 - Security & readiness verified
+- [ ] Task 191-195 - Monitoring & caching optimized
+- [ ] Task 196-200 - Diff viewer & documentation
+
+#### Week 12: Enterprise & Launch
+- [ ] Task 201-205 - SSO & multi-region ready
+- [ ] Task 206-210 - Data export & GA launch
+- [ ] Task 211-215 - Signing & design tokens
+- [ ] Task 216-220 - Status page & knowledge base
+- [ ] Task 221-225 - Webhooks & documentation
+- [ ] Task 226-230 - Theming & postmortem
+
+---
+
+### Phase Completion Gates
+
+#### Phase 1 Gate (Week 3)
+**Required for Phase 2:**
+- [ ] All critical path tasks 001-010 complete
+- [ ] User can log in and create projects
+- [ ] Basic diagram editor is functional
+- [ ] No blocking bugs in core features
+
+#### Phase 2 Gate (Week 6)
+**Required for Phase 3:**
+- [ ] AI analysis working end-to-end
+- [ ] Import and export functional
+- [ ] Real-time collaboration scaffolded
+- [ ] All CRUD operations stable
+
+#### Phase 3 Gate (Week 9)
+**Required for Phase 4:**
+- [ ] All critical path tasks 121-123 complete
+- [ ] Advanced features demonstrable
+- [ ] Performance targets met
+- [ ] Integration tests passing
+
+#### Phase 4 Gate (Week 12)
+**Required for Launch:**
+- [ ] All critical path tasks 181-210 complete
+- [ ] Security audit passed
+- [ ] Performance budgets met
+- [ ] Documentation complete
+- [ ] Production deployment successful
+
+---
+
+### Risk Mitigation Checklist
+
+#### High-Risk Areas
+- [ ] **D1 Limitations** - Test large dataset handling early (Week 2)
+- [ ] **AI Response Parsing** - Implement robust fallbacks (Week 4)
+- [ ] **React Flow Performance** - Benchmark with 500+ nodes (Week 7)
+- [ ] **Real-time Conflicts** - Test concurrent editing scenarios (Week 8)
+- [ ] **Export Generation** - Verify PDF/PNG quality (Week 9)
+
+#### Dependencies to Monitor
+- [ ] Cloudflare D1 availability and limits
+- [ ] Anthropic API rate limits and costs
+- [ ] React Flow v12 compatibility
+- [ ] Better Auth edge runtime support
+- [ ] Wrangler deployment stability
+
+---
+
+**Document Version:** 1.0  
+**Last Updated:** September 30, 2025  
+**Total Tasks:** 230  
+**Estimated Duration:** 12 weeks  
+**Status:** Complete - Ready for Implementation
