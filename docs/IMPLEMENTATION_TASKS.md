@@ -12,14 +12,14 @@
 ## Phase 1: Foundation (Weeks 1-3)
 ### Tasks 001-050
 
-### Task 001: Initialize Cloudflare SaaS Stack Baseline
+### Task 001: Initialize Cloudflare SaaS Stack Baseline (DONE)
 **Phase:** Foundation
 **Estimated Time:** 6 hours
 **Priority:** Critical
 **Dependencies:** []
 
 **Objective:**
-Set up the baseline project aligned with Cloudflare Pages + Workers, D1, R2, and Durable Objects to match the PRD’s foundation.
+Set up the baseline project aligned with Cloudflare Pages + Workers, D1, R2, and Durable Objects to match the PRD's foundation.
 
 **Technical Requirements:**
 - Next.js 15 App Router
@@ -50,11 +50,11 @@ Set up the baseline project aligned with Cloudflare Pages + Workers, D1, R2, and
 - Version mismatches; pin versions per docs
 
 **Reference Documentation:**
-- PRD “Technical Architecture” section
+- PRD "Technical Architecture" section
 
 ---
 
-### Task 002: Configure D1 Database and Drizzle ORM
+### Task 002: Configure D1 Database and Drizzle ORM (DONE)
 **Phase:** Foundation
 **Estimated Time:** 6 hours
 **Priority:** Critical
@@ -89,7 +89,7 @@ Enable D1 database with Drizzle ORM including local and production migration flo
 - Wrangler version alignment for D1
 
 **Reference Documentation:**
-- PRD “Database Schema” section
+- PRD "Database Schema" section
 
 ---
 
@@ -127,7 +127,7 @@ Create core tables for projects and diagrams including JSON fields for nodes/edg
 - FK cascade rules on D1
 
 **Reference Documentation:**
-- PRD “Core Data Model”
+- PRD "Core Data Model"
 
 ---
 
@@ -164,7 +164,7 @@ Integrate Better Auth for session handling and restrict dashboard/API routes to 
 - Edge runtime compatibility
 
 **Reference Documentation:**
-- PRD “Authentication”
+- PRD "Authentication"
 
 ---
 
@@ -203,7 +203,7 @@ Create base layouts and landing/auth pages consistent with project structure.
 - CSS load order
 
 **Reference Documentation:**
-- PRD “User Interface Design”
+- PRD "User Interface Design"
 
 ---
 
@@ -269,7 +269,7 @@ Add basic ability to create and list projects owned by the user.
 
 **Acceptance Criteria:**
 - [ ] Projects can be created
-- [ ] Only user’s projects listed
+- [ ] Only user's projects listed
 
 **Testing Strategy:**
 - Manual creation and fetch
@@ -278,7 +278,7 @@ Add basic ability to create and list projects owned by the user.
 - Input validation consistency
 
 **Reference Documentation:**
-- PRD “Application Architecture”
+- PRD "Application Architecture"
 
 ---
 
@@ -315,7 +315,7 @@ Enable creating, listing, and fetching a diagram within a project.
 - JSON serialization of nodes/edges
 
 **Reference Documentation:**
-- PRD “Diagram Management”
+- PRD "Diagram Management"
 
 ---
 
@@ -352,7 +352,7 @@ Render a basic React Flow canvas for a specific diagram with persisted nodes/edg
 - SSR/CSR boundaries for React Flow
 
 **Reference Documentation:**
-- PRD “React Flow Implementation”
+- PRD "React Flow Implementation"
 
 ---
 
@@ -389,7 +389,7 @@ Create a Zustand store to manage diagram state (nodes, edges, viewport) and sync
 - Avoiding re-render storms
 
 **Reference Documentation:**
-- PRD “State Management”
+- PRD "State Management"
 
 ---
 
@@ -599,7 +599,7 @@ Create secure API route scaffold for PRD analysis requests.
 - Response size limits
 
 **Reference Documentation:**
-- PRD “AI Analysis Endpoints”
+- PRD "AI Analysis Endpoints"
 
 ---
 
@@ -634,7 +634,7 @@ Wire Anthropic client and environment variable management for server-side use.
 - Edge runtime compatibility
 
 **Reference Documentation:**
-- PRD “Key Dependencies”
+- PRD "Key Dependencies"
 
 ---
 
@@ -737,7 +737,7 @@ Create import page with text area and file-upload stubs, progress visualization.
 - File parsing to be implemented later
 
 **Reference Documentation:**
-- PRD “PRD Import Interface”
+- PRD "PRD Import Interface"
 
 ---
 
@@ -770,7 +770,7 @@ Create `ExportEngine` with method stubs for markdown/json/cursor/pdf/png.
 - Later PDF/PNG generation complexity
 
 **Reference Documentation:**
-- PRD “Export System”
+- PRD "Export System"
 
 ---
 
@@ -1075,7 +1075,7 @@ Ensure dashboard pages and API routes require authentication and redirect unauth
 - Route matching for nested paths
 
 **Reference Documentation:**
-- PRD “Authentication”
+- PRD "Authentication"
 
 ---
 
@@ -5147,7 +5147,7 @@ Implement intelligent notification system for collaboration events including men
 **Technical Requirements:**
 - Real-time notification delivery
 - Notification preferences
-- Email/webhook integrations
+- Notification history
 
 **Implementation Steps:**
 1. Create notification service with Durable Objects.
@@ -8664,8 +8664,8 @@ Hold a GA postmortem, publish learnings, and define the next cycle roadmap.
 ### Task Index by Category
 
 #### Foundation & Infrastructure (23 tasks)
-- 001: Initialize Cloudflare SaaS Stack Baseline
-- 002: Configure D1 Database and Drizzle ORM
+- 001: Initialize Cloudflare SaaS Stack Baseline (DONE)
+- 002: Configure D1 Database and Drizzle ORM (DONE)
 - 003: Implement Initial Schema (Projects, Diagrams)
 - 004: Auth Foundation with Better Auth
 - 005: App Router Base Routes and Layouts
@@ -8942,12 +8942,12 @@ Hold a GA postmortem, publish learnings, and define the next cycle roadmap.
 **These tasks must be completed in order and block other work. Any delay in critical path tasks delays the entire project.**
 
 #### Phase 1 Critical Path (Foundation)
-1. **Task 001** - Initialize Cloudflare SaaS Stack Baseline
+1. **Task 001** - Initialize Cloudflare SaaS Stack Baseline (DONE)
    - Blocks: All other tasks
    - Duration: 6 hours
    - Next: 002, 004, 005
 
-2. **Task 002** - Configure D1 Database and Drizzle ORM
+2. **Task 002** - Configure D1 Database and Drizzle ORM (DONE)
    - Blocks: All database operations (003, 007, 008, 019, 041, 042)
    - Duration: 6 hours
    - Next: 003
