@@ -113,3 +113,14 @@ All notable changes to this project will be documented in this file.
 
 ### Notes
 - Implementation task list is now complete (001–230).
+
+## [0.1.12] - 2025-10-05
+### Added
+- Task 002 completed: Configure D1 Database and Drizzle ORM
+  - Verified `wrangler.jsonc` D1 binding `next_cf_app` and `migrations_dir: ./src/drizzle`
+  - Confirmed `drizzle.config.ts` uses `sqlite` + `d1-http` with Cloudflare credentials
+  - Applied local migrations successfully (`0000_initial_schemas_migration.sql`)
+  - Inspected tables via Wrangler: `account`, `user`, `session`, `verification`, `categories`, `todos`
+
+### Notes
+- Next: proceed to Task 003 (Initial schema for projects/diagrams) per `docs/IMPLEMENTATION_TASKS.md`.
