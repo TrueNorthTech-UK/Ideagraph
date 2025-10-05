@@ -113,11 +113,11 @@ Create core tables for projects and diagrams including JSON fields for nodes/edg
 
 **Files to Create/Modify:**
 - `src/db/schema.ts`
-- `src/drizzle/0001_core.sql`
+- `src/drizzle/0001_projects_diagrams.sql`
 - `src/lib/utils.ts` (seeding helper)
 
 **Acceptance Criteria:**
-- [ ] Tables created with correct columns
+- [x] Tables created with correct columns
 - [ ] Seeded project and diagram exist
 
 **Testing Strategy:**

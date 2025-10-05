@@ -2,16 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.1.11] - 2025-10-05
-### Added
-- Task 001 completed: Initialize Cloudflare SaaS Stack Baseline
-  - Verified `package.json` scripts and baseline dependencies
-  - Confirmed `wrangler.jsonc` bindings (D1, R2, AI, Assets) and generated types
-  - Built app for Cloudflare Workers using OpenNext (`build:cf`) successfully
-  - Sanity-checked local dev startup without fatal errors
 
-### Notes
-- Next: proceed to Task 002 (D1 + Drizzle configuration) per `docs/IMPLEMENTATION_TASKS.md`.
 
 ## [0.1.0] - 2025-09-29
 ### Added
@@ -113,7 +104,16 @@ All notable changes to this project will be documented in this file.
 
 ### Notes
 - Implementation task list is now complete (001–230).
+## [0.1.11] - 2025-10-05
+### Added
+- Task 001 completed: Initialize Cloudflare SaaS Stack Baseline
+  - Verified `package.json` scripts and baseline dependencies
+  - Confirmed `wrangler.jsonc` bindings (D1, R2, AI, Assets) and generated types
+  - Built app for Cloudflare Workers using OpenNext (`build:cf`) successfully
+  - Sanity-checked local dev startup without fatal errors
 
+### Notes
+- Next: proceed to Task 002 (D1 + Drizzle configuration) per `docs/IMPLEMENTATION_TASKS.md`.
 ## [0.1.12] - 2025-10-05
 ### Added
 - Task 002 completed: Configure D1 Database and Drizzle ORM
@@ -124,3 +124,10 @@ All notable changes to this project will be documented in this file.
 
 ### Notes
 - Next: proceed to Task 003 (Initial schema for projects/diagrams) per `docs/IMPLEMENTATION_TASKS.md`.
+## [0.1.13] - 2025-10-05
+### Added
+- Task 003 completed: Implement Initial Schema (Projects, Diagrams)
+  - Added tables `projects` and `diagrams` via Drizzle schema
+  - Created migration `src/drizzle/0001_projects_diagrams.sql`
+  - Updated `docs/IMPLEMENTATION_TASKS.md` acceptance criteria and file paths
+
