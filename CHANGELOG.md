@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file.
 
 
 
+## [0.1.13] - 2025-01-27
+### Added
+- Environment verification script (`scripts/verify-env.js`) to validate configuration
+- Comprehensive environment setup guide (`docs/ENVIRONMENT_SETUP.md`)
+- Enhanced TypeScript types for Cloudflare environment variables
+- Improved R2 URL construction with fallback logic
+- `pnpm run verify-env` command for environment validation
+
+### Fixed
+- Environment variable type definitions in `types/env.d.ts`
+- R2 storage URL construction in `src/lib/r2.ts`
+- Missing environment variable documentation and examples
+
+### Changed
+- Updated `.dev.vars` template with all required and optional variables
+- Enhanced environment variable validation and error reporting
+- Improved documentation for Cloudflare integration setup
+
 ## [0.1.0] - 2025-09-29
 ### Added
 - Generated documentation from PRD:

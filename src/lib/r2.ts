@@ -44,7 +44,8 @@ export async function uploadToR2(
         }
 
         // Return public URL of R2 (should be using custom domain)
-        const publicUrl = `https://${(env as any).CLOUDFLARE_R2_URL}/${key}`;
+        const r2Url = (env as any).CLOUDFLARE_R2_URL || `https://pub-${env.CLOUDFLARE_ACCOUNT_ID}.r2.dev/ideagraph-media`;
+        const publicUrl = `${r2Url}/${key}`;
 
         return {
             success: true,
