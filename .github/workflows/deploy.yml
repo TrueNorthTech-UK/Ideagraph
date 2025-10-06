@@ -163,6 +163,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy
           secrets: |
             BETTER_AUTH_SECRET
             GOOGLE_CLIENT_ID
