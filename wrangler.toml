@@ -1,0 +1,28 @@
+name = "ideagraph"
+main = ".open-next/worker.js"
+compatibility_date = "2025-03-01"
+compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
+
+[assets]
+binding = "ASSETS"
+directory = ".open-next/assets"
+
+[observability]
+enabled = true
+
+[[d1_databases]]
+binding = "next_cf_app"
+database_name = "next-cf-app"
+database_id = "757a32d1-5779-4f09-bcf3-b268013395d4"
+migrations_dir = "./src/drizzle"
+
+[[r2_buckets]]
+bucket_name = "ideagraph-media"
+binding = "next_cf_app_bucket"
+
+# [[vectorize]]
+# binding = "VECTORIZE"
+# index_name = "next-cf-app-index"
+
+[ai]
+binding = "AI"
