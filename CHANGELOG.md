@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 
 
 
+## [0.1.34] - 2025-10-09
+### Fixed
+- **React Flow Error**: Fixed "zustand provider as an ancestor" error in diagram canvas
+  - Added `ReactFlowProvider` import to DiagramCanvas component
+  - Wrapped `DiagramCanvasInner` with `ReactFlowProvider` to provide proper context
+  - Fixed 500 Internal Server Error when accessing diagram detail pages
+  - Resolved React Flow context access issues with `useReactFlow()` hook
+  
+- **404 Navigation Error**: Fixed invalid route in projects list
+  - Changed diagram link from `/dashboard/projects/{projectId}/diagrams` to `/dashboard/diagrams`
+  - Fixed 404 error when clicking diagram icon in project cards
+  - Users can now successfully navigate to diagrams from project list
+
 ## [0.1.33] - 2025-10-09
 ### Fixed
 - **TypeScript Build Error**: Fixed type error in `/dashboard/diagrams/page.tsx`

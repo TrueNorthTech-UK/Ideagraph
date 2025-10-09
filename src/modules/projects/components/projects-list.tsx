@@ -178,9 +178,7 @@ export function ProjectsList() {
                                 View Details
                             </Button>
                         </Link>
-                        <Link
-                            href={`/dashboard/projects/${project.id}/diagrams`}
-                        >
+                        <Link href="/dashboard/diagrams">
                             <Button variant="outline" size="icon">
                                 <Network className="h-4 w-4" />
                             </Button>

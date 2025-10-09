@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useMemo } from "react";
 import {
     ReactFlow,
+    ReactFlowProvider,
     Background,
     Controls,
     MiniMap,
@@ -420,14 +421,16 @@ function DiagramCanvasInner({
 // Main component with Sidebar layout
 export default function DiagramCanvas(props: DiagramCanvasProps) {
     return (
-        <div className="flex w-full h-full">
-            {/* Sidebar */}
-            <Sidebar />
+        <ReactFlowProvider>
+            <div className="flex w-full h-full">
+                {/* Sidebar */}
+                <Sidebar />
 
-            {/* Canvas */}
-            <div className="flex-1 h-full">
-                <DiagramCanvasInner {...props} />
+                {/* Canvas */}
+                <div className="flex-1 h-full">
+                    <DiagramCanvasInner {...props} />
+                </div>
             </div>
-        </div>
+        </ReactFlowProvider>
     );
 }
