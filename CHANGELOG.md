@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file.
 - Added separate `build:worker` script for OpenNext transformation
 - Cloudflare Pages build command should be configured as: `pnpm run build && pnpm run build:worker`
 - Updated `wrangler.toml` D1 target to existing database `ideagraph-db` (id: `b8ae71ae-7012-47f7-bd91-dde6e5449b12`)
+- Updated `wrangler.jsonc` D1 config to `ideagraph-db` to align with wrangler.toml and Dashboard binding
 
 ## [0.1.13] - 2025-01-27
 ### Added
