@@ -66,6 +66,17 @@ export function ProjectsList() {
 
     useEffect(() => {
         fetchProjects();
+
+        // Listen for project creation events
+        const handleProjectCreated = () => {
+            fetchProjects();
+        };
+
+        window.addEventListener('projectCreated', handleProjectCreated);
+
+        return () => {
+            window.removeEventListener('projectCreated', handleProjectCreated);
+        };
     }, [fetchProjects]);
 
     const formatDate = (date: Date | string) => {

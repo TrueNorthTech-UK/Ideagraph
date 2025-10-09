@@ -52,6 +52,9 @@ export function CreateProjectDialog() {
             toast.success("Project created successfully!");
             setFormData({ name: "", description: "" });
             setOpen(false);
+            
+            // Dispatch custom event to notify ProjectsList
+            window.dispatchEvent(new Event('projectCreated'));
             router.refresh();
         } catch (error) {
             console.error("Error creating project:", error);

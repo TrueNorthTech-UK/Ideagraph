@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 
 
+## [0.1.36] - 2025-10-09
+### Fixed
+- **Project Creation UX**: Fixed issue where newly created projects don't appear until page refresh
+  - Added custom event system to communicate between CreateProjectDialog and ProjectsList
+  - ProjectsList now listens for `projectCreated` events and automatically refetches data
+  - New projects now appear immediately in the list after creation
+  - Improved user experience by eliminating manual refresh requirement
+
 ## [0.1.35] - 2025-10-09
 ### Fixed
 - **Critical: Infinite Render Loop**: Fixed React error #185 (Maximum update depth exceeded)
