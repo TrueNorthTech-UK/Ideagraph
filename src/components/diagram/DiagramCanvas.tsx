@@ -11,6 +11,8 @@ import {
     type NodeChange,
     type EdgeChange,
     Panel,
+    SelectionMode,
+    useReactFlow,
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 import {
@@ -38,6 +40,7 @@ import {
 } from "@/lib/diagram/edges";
 import Toolbar from "./controls/Toolbar";
 import ViewControls from "./controls/ViewControls";
+import Sidebar from "./Sidebar";
 
 interface DiagramCanvasProps {
     diagramId: string;
@@ -45,7 +48,8 @@ interface DiagramCanvasProps {
     initialEdges?: Edge[];
 }
 
-export default function DiagramCanvas({
+// Inner component that has access to ReactFlow context
+function DiagramCanvasInner({
     diagramId,
     initialNodes = [],
     initialEdges = [],
@@ -66,11 +70,15 @@ export default function DiagramCanvas({
         setEdges,
         setViewport,
         addEdge,
+        addNode,
         setSaving,
         setSaveSuccess,
         setSaveError,
         rollbackOperation,
     } = useDiagramActions();
+
+    // Get ReactFlow instance for coordinate conversion
+    const { screenToFlowPosition } = useReactFlow();
 
     // Track if diagram has been initialized
     const initializedRef = useRef(false);
@@ -183,6 +191,52 @@ export default function DiagramCanvas({
         [addEdge],
     );
 
+    // Handle drag over - required for drop to work
+    const onDragOver = useCallback((event: React.DragEvent) => {
+        event.preventDefault();
+        event.dataTransfer.dropEffect = "move";
+    }, []);
+
+    // Handle drop - create new node from palette
+    const onDrop = useCallback(
+        (event: React.DragEvent) => {
+            event.preventDefault();
+
+            // Get the node type and data from the drag event
+            const nodeDataString = event.dataTransfer.getData(
+                "application/reactflow",
+            );
+            if (!nodeDataString) return;
+
+            try {
+                const { type, data } = JSON.parse(nodeDataString);
+
+                // Convert screen coordinates to React Flow coordinates
+                const position = screenToFlowPosition({
+                    x: event.clientX,
+                    y: event.clientY,
+                });
+
+                // Generate unique ID for the new node
+                const nodeId = `${type}-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+
+                // Create new node
+                const newNode: Node = {
+                    id: nodeId,
+                    type,
+                    position,
+                    data,
+                };
+
+                // Add node to store
+                addNode(newNode);
+            } catch (error) {
+                console.error("Error creating node from drop:", error);
+            }
+        },
+        [screenToFlowPosition, addNode],
+    );
+
     // Handle viewport changes
     const onViewportChange = useCallback(
         (newViewport: { x: number; y: number; zoom: number }) => {
@@ -282,12 +336,22 @@ export default function DiagramCanvas({
                 onEdgesChange={onEdgesChange}
                 onConnect={onConnect}
                 onViewportChange={onViewportChange}
+                onDrop={onDrop}
+                onDragOver={onDragOver}
                 defaultViewport={viewport}
                 nodeTypes={nodeTypes}
                 edgeTypes={edgeTypes}
                 defaultEdgeOptions={DEFAULT_EDGE_OPTIONS}
                 fitView
                 className="bg-background"
+                // Selection configuration
+                panOnDrag={[1, 2]} // Pan with left or middle mouse button
+                selectionOnDrag // Enable box/marquee selection with mouse drag
+                selectionMode={SelectionMode.Partial} // Select nodes that are partially in the selection box
+                multiSelectionKeyCode="Shift" // Hold Shift for multi-select
+                deleteKeyCode="Delete" // Delete selected nodes with Delete key
+                selectionKeyCode="Shift" // Hold Shift for adding to selection
+                selectNodesOnDrag={false} // Don't select nodes while dragging
             >
                 <Background />
                 <MiniMap />
@@ -349,6 +413,21 @@ export default function DiagramCanvas({
                     </div>
                 </Panel>
             </ReactFlow>
+        </div>
+    );
+}
+
+// Main component with Sidebar layout
+export default function DiagramCanvas(props: DiagramCanvasProps) {
+    return (
+        <div className="flex w-full h-full">
+            {/* Sidebar */}
+            <Sidebar />
+
+            {/* Canvas */}
+            <div className="flex-1 h-full">
+                <DiagramCanvasInner {...props} />
+            </div>
         </div>
     );
 }

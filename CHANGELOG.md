@@ -4,6 +4,53 @@ All notable changes to this project will be documented in this file.
 
 
 
+## [0.1.31] - 2025-10-09
+### Added
+- Task 031 completed: Selection and Multi-Select on Canvas
+  - **Selection Configuration**:
+    - Imported `SelectionMode` from React Flow for enhanced selection control
+    - Enabled marquee/box selection with `selectionOnDrag` prop
+    - Configured `SelectionMode.Partial` to select nodes partially in selection box
+    - Multi-select support with Shift key (`multiSelectionKeyCode="Shift"`)
+    - Selection accumulation with Shift key (`selectionKeyCode="Shift"`)
+    - Delete key support for removing selected items (`deleteKeyCode="Delete"`)
+    - Prevented accidental selections during drag with `selectNodesOnDrag={false}`
+    - Pan configuration with `panOnDrag={[1, 2]}` (left/middle mouse button)
+  - **Visual Styling for Selected Items**:
+    - Selected nodes: 2px primary color outline with 2px offset
+    - Selected nodes: Semi-transparent primary color shadow (4px radius)
+    - Selected nodes: Animated pulse effect (2s cycle) that pauses during drag
+    - Selected edges: Thicker stroke width (3px) in primary color
+    - Selected edge text: Bold font weight in primary color
+    - Selection box (marquee): Semi-transparent primary background with dashed border
+    - Hover states: Shadow on nodes, thicker stroke on edges
+    - Multi-select rectangle: Dashed border with semi-transparent fill
+    - Smooth transitions (0.2s) for all selection state changes
+  - **Selection State Management**:
+    - onNodesChange handler processes selection changes (lines 108-117)
+    - onEdgesChange handler processes selection changes (lines 152-161)
+    - Selection state properly synced with Zustand store
+    - Connected edges automatically removed when parent nodes deleted
+  - **User Experience Features**:
+    - Click to select single node/edge
+    - Shift+click to add/remove from selection
+    - Click and drag on empty canvas for box/marquee selection
+    - Ctrl/Cmd+drag to pan canvas (prevents accidental selection)
+    - Middle mouse button for panning
+    - Delete key removes selected items
+    - Visual feedback for all selection states
+  - **Performance Optimizations**:
+    - CSS-only animations (GPU accelerated)
+    - No JavaScript animations for selection feedback
+    - Store updates batched by React Flow
+    - Minimal re-renders through proper selector usage
+
+### Notes
+- Selection functionality fully implemented with comprehensive visual feedback
+- All acceptance criteria met: single/multi-select work, selected styles visible
+- Phase 1 progress: 31/50 tasks complete (62%)
+- Next: proceed to Task 032 (Drag-and-Drop from Sidebar Palette) per `docs/IMPLEMENTATION_TASKS.md`
+
 ## [0.1.30] - 2025-10-09
 ### Added
 - Task 030 completed: Protected Dashboard Routes and Redirects

@@ -1104,7 +1104,7 @@ Ensure dashboard pages and API routes require authentication and redirect unauth
 
 ---
 
-### Task 031: Selection and Multi-Select on Canvas
+### Task 031: Selection and Multi-Select on Canvas (DONE)
 **Phase:** Foundation
 **Estimated Time:** 4 hours
 **Priority:** Medium
@@ -1124,8 +1124,8 @@ Enable click selection, shift-click multi-select, and marquee selection for node
 - `src/components/diagram/DiagramCanvas.tsx`
 
 **Acceptance Criteria:**
-- [ ] Single and multi-select work
-- [ ] Selected styles visible
+- [x] Single and multi-select work - Click selection, Shift+click multi-select, and marquee/box selection all functional with proper state management via onNodesChange and onEdgesChange handlers
+- [x] Selected styles visible - Selected nodes show 2px primary outline with 4px shadow and animated pulse; selected edges show 3px stroke in primary color; selection box has dashed border
 
 **Testing Strategy:**
 - Manual selection scenarios

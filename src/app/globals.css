@@ -137,13 +137,73 @@
 
 /* Custom React Flow Styles */
 .react-flow__edge-path {
-    transition: stroke 0.2s ease-in-out;
+    transition: stroke 0.2s ease-in-out, stroke-width 0.2s ease-in-out;
 }
 
+/* Selected Edge Styling */
 .react-flow__edge.selected .react-flow__edge-path {
-    stroke-width: 3;
+    stroke-width: 3 !important;
+    stroke: hsl(var(--primary)) !important;
 }
 
+.react-flow__edge.selected .react-flow__edge-text {
+    fill: hsl(var(--primary)) !important;
+    font-weight: 600;
+}
+
+/* Edge Hover Styling */
 .react-flow__edge:hover .react-flow__edge-path {
-    stroke-width: 3;
+    stroke-width: 2.5;
+    stroke: hsl(var(--primary) / 0.7);
+}
+
+/* Selected Node Styling */
+.react-flow__node.selected {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px hsl(var(--primary) / 0.1);
+}
+
+.react-flow__node.selected:hover {
+    box-shadow: 0 0 0 4px hsl(var(--primary) / 0.2);
+}
+
+/* Selection Box (Marquee) Styling */
+.react-flow__selection {
+    background: hsl(var(--primary) / 0.08);
+    border: 1px dashed hsl(var(--primary) / 0.5);
+}
+
+/* Node Hover Styling */
+.react-flow__node:hover {
+    box-shadow: 0 2px 8px hsl(var(--foreground) / 0.1);
+}
+
+/* Selection Border Animation */
+@keyframes selection-pulse {
+    0%, 100% {
+        outline-color: hsl(var(--primary));
+        box-shadow: 0 0 0 4px hsl(var(--primary) / 0.1);
+    }
+    50% {
+        outline-color: hsl(var(--primary) / 0.8);
+        box-shadow: 0 0 0 6px hsl(var(--primary) / 0.15);
+    }
+}
+
+.react-flow__node.selected.react-flow__node-selectable {
+    animation: selection-pulse 2s ease-in-out infinite;
+}
+
+/* Disable animation when actively dragging */
+.react-flow__node.dragging {
+    animation: none !important;
+}
+
+/* Multi-select indicator */
+.react-flow__nodesselection-rect {
+    fill: hsl(var(--primary) / 0.05);
+    stroke: hsl(var(--primary));
+    stroke-width: 1;
+    stroke-dasharray: 5, 5;
 }
