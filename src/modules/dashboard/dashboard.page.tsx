@@ -45,7 +45,7 @@ export default async function Dashboard() {
                         </CardDescription>
                     </CardHeader>
                     <CardContent>
-                        <Link href="/dashboard/projects/new">
+                        <Link href="/dashboard/projects">
                             <Button className="w-full bg-blue-600 hover:bg-blue-700">
                                 Create Project
                                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -58,16 +58,16 @@ export default async function Dashboard() {
                     <CardHeader>
                         <CardTitle className="flex items-center text-purple-600">
                             <Network className="mr-2 h-5 w-5" />
-                            New Diagram
+                            View Diagrams
                         </CardTitle>
                         <CardDescription>
-                            Create a visual diagram for your architecture
+                            Browse all your architecture diagrams
                         </CardDescription>
                     </CardHeader>
                     <CardContent>
-                        <Link href="/dashboard/diagrams/new">
+                        <Link href="/dashboard/diagrams">
                             <Button className="w-full bg-purple-600 hover:bg-purple-700">
-                                Create Diagram
+                                View Diagrams
                                 <ArrowRight className="ml-2 h-4 w-4" />
                             </Button>
                         </Link>

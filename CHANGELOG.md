@@ -4,6 +4,33 @@ All notable changes to this project will be documented in this file.
 
 
 
+## [0.1.32] - 2025-10-09
+### Fixed
+- **Navigation 404 Errors**: Fixed multiple 404 errors in navigation
+  - Created `/dashboard/diagrams/page.tsx` to display all diagrams across projects
+  - Created `/dashboard/settings/page.tsx` as placeholder for settings functionality
+  - Fixed dashboard link from `/dashboard/projects/new` to `/dashboard/projects` (projects use dialog creation)
+  - Fixed dashboard card from "New Diagram" to "View Diagrams" linking to diagram list
+  - All navigation links now point to valid routes
+  - Users can now successfully navigate through all menu items without encountering 404 errors
+
+### Added
+- **Diagrams List Page** (`/dashboard/diagrams`):
+  - Displays all diagrams across all user projects
+  - Card-based grid layout with hover effects
+  - Shows diagram name, description, associated project, and last updated date
+  - Direct links to individual diagram canvas pages
+  - Empty state with call-to-action to create first project
+  - Fetches and aggregates diagrams from all projects
+  
+- **Settings Page** (`/dashboard/settings`):
+  - Placeholder page with planned settings sections
+  - Profile settings card
+  - Notifications configuration card
+  - Security settings card
+  - Appearance/theme customization card
+  - Each section marked as "coming soon" with disabled action buttons
+
 ## [0.1.31] - 2025-10-09
 ### Added
 - Task 031 completed: Selection and Multi-Select on Canvas
