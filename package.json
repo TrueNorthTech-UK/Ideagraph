@@ -4,6 +4,7 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
+        "prebuild": "rm -rf .next",
         "build": "next build",
         "build:worker": "npx @opennextjs/cloudflare build",
         "start": "next start",
