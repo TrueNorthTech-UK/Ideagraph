@@ -6,11 +6,13 @@ All notable changes to this project will be documented in this file.
 
 ## [0.1.14] - 2025-10-09
 ### Fixed
-- Cloudflare Pages deployment build process: updated `build` script to include OpenNext transformation step
-- Build script now runs `next build && npx @opennextjs/cloudflare build` to properly generate `.open-next/worker.js` entry point required by Wrangler
+- Cloudflare Pages deployment infinite build loop: separated OpenNext build into dedicated `build:worker` script
+- Previous approach caused recursive loop because OpenNext internally calls `pnpm run build`
 
 ### Changed
-- Modified `package.json` build script to support Cloudflare Pages deployment pipeline
+- Reverted `build` script to `next build` only
+- Added separate `build:worker` script for OpenNext transformation
+- Cloudflare Pages build command should be configured as: `pnpm run build && pnpm run build:worker`
 
 ## [0.1.13] - 2025-01-27
 ### Added
