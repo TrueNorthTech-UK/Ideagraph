@@ -23,6 +23,16 @@ interface Project {
     description: string | null;
 }
 
+interface ProjectsApiResponse {
+    projects?: Project[];
+    error?: string;
+}
+
+interface DiagramsApiResponse {
+    diagrams?: Diagram[];
+    error?: string;
+}
+
 export default function DiagramsListPage() {
     const [diagrams, setDiagrams] = useState<Diagram[]>([]);
     const [projects, setProjects] = useState<Project[]>([]);
@@ -35,7 +45,7 @@ export default function DiagramsListPage() {
 
                 // Fetch projects
                 const projectsResponse = await fetch("/api/projects");
-                const projectsData = await projectsResponse.json();
+                const projectsData = await projectsResponse.json() as ProjectsApiResponse;
 
                 if (!projectsResponse.ok) {
                     throw new Error(projectsData.error || "Failed to fetch projects");
@@ -51,7 +61,7 @@ export default function DiagramsListPage() {
                         const diagramsResponse = await fetch(
                             `/api/diagrams?projectId=${project.id}`,
                         );
-                        const diagramsData = await diagramsResponse.json();
+                        const diagramsData = await diagramsResponse.json() as DiagramsApiResponse;
 
                         if (diagramsResponse.ok && diagramsData.diagrams) {
                             const diagramsWithProject = diagramsData.diagrams.map(

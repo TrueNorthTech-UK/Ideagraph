@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 
 
+## [0.1.33] - 2025-10-09
+### Fixed
+- **TypeScript Build Error**: Fixed type error in `/dashboard/diagrams/page.tsx`
+  - Added `ProjectsApiResponse` interface to properly type projects API response
+  - Added `DiagramsApiResponse` interface to properly type diagrams API response
+  - Type cast `projectsData` and `diagramsData` to their respective interfaces
+  - Resolved "Type error: 'projectsData' is of type 'unknown'" compilation error
+  - Build now completes successfully without TypeScript errors
+
 ## [0.1.32] - 2025-10-09
 ### Fixed
 - **Navigation 404 Errors**: Fixed multiple 404 errors in navigation
