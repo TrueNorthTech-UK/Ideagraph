@@ -16,5 +16,3 @@ export const projects = sqliteTable("projects", {
         .$onUpdate(() => /* @__PURE__ */ new Date())
         .notNull(),
 });
-
-

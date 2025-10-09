@@ -1,0 +1,22 @@
+CREATE TABLE `import_sessions` (
+	`id` text PRIMARY KEY NOT NULL,
+	`user_id` text NOT NULL,
+	`project_id` text,
+	`file_name` text,
+	`original_content` text(1048576) NOT NULL,
+	`content_length` integer NOT NULL,
+	`processed_entities` text(524288),
+	`processed_relationships` text(524288),
+	`processed_flows` text(524288),
+	`recommendations` text(262144),
+	`confidence` integer,
+	`processing_time` integer,
+	`model_used` text,
+	`token_count` integer,
+	`status` text DEFAULT 'pending' NOT NULL,
+	`error_message` text,
+	`created_at` integer DEFAULT (cast((julianday('now') - 2440587.5)*86400000 as integer)) NOT NULL,
+	`completed_at` integer,
+	FOREIGN KEY (`user_id`) REFERENCES `user`(`id`) ON UPDATE no action ON DELETE cascade,
+	FOREIGN KEY (`project_id`) REFERENCES `projects`(`id`) ON UPDATE no action ON DELETE set null
+);

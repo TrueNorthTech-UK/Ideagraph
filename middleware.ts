@@ -23,5 +23,6 @@ export async function middleware(request: NextRequest) {
 export const config = {
     matcher: [
         "/dashboard/:path*", // Protects /dashboard and all sub-routes
+        "/api/((?!auth).)*", // Protects all /api routes except /api/auth/*
     ],
 };

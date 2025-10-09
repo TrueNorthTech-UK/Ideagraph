@@ -19,5 +19,3 @@ export const diagrams = sqliteTable("diagrams", {
         .$onUpdate(() => /* @__PURE__ */ new Date())
         .notNull(),
 });
-
-
