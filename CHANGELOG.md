@@ -12,6 +12,9 @@ All notable changes to this project will be documented in this file.
   - New projects now appear immediately in the list after creation
   - Improved user experience by eliminating manual refresh requirement
 
+### Deployment
+- Triggering Cloudflare rebuild to deploy critical infinite loop fixes from v0.1.35 and v0.1.36
+
 ## [0.1.35] - 2025-10-09
 ### Fixed
 - **Critical: Infinite Render Loop**: Fixed React error #185 (Maximum update depth exceeded)
