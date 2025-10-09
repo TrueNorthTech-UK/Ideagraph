@@ -83,15 +83,19 @@ function DiagramCanvasInner({
 
     // Track if diagram has been initialized
     const initializedRef = useRef(false);
+    const initializedDiagramIdRef = useRef<string | null>(null);
     const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-    // Initialize diagram on mount
+    // Initialize diagram on mount or when diagram ID changes
     useEffect(() => {
-        if (!initializedRef.current) {
+        // Only initialize if this is a new diagram or not yet initialized
+        if (initializedDiagramIdRef.current !== diagramId) {
             initializeDiagram(diagramId, initialNodes, initialEdges);
             initializedRef.current = true;
+            initializedDiagramIdRef.current = diagramId;
         }
-    }, [diagramId, initialNodes, initialEdges, initializeDiagram]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [diagramId]); // Only re-run when diagramId changes
 
     // Handle node changes from React Flow
     const onNodesChange = useCallback(
@@ -246,32 +250,10 @@ function DiagramCanvasInner({
         [setViewport],
     );
 
-    // Debounced save function
-    useEffect(() => {
-        // Skip save if no changes or if diagram not initialized
-        if (!hasUnsavedChanges || !initializedRef.current) return;
-        if (nodes.length === 0 && edges.length === 0) return;
-
-        // Clear existing timeout
-        if (saveTimeoutRef.current) {
-            clearTimeout(saveTimeoutRef.current);
-        }
-
-        // Set new timeout for debounced save
-        saveTimeoutRef.current = setTimeout(async () => {
-            await saveDiagram();
-        }, 2000); // 2 second debounce
-
-        return () => {
-            if (saveTimeoutRef.current) {
-                clearTimeout(saveTimeoutRef.current);
-            }
-        };
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [nodes, edges, hasUnsavedChanges]);
-
     // Save diagram to API with optimistic updates
-    const saveDiagram = async () => {
+    const saveDiagram = useCallback(async () => {
+        if (!diagramId) return;
+        
         setSaving(true);
 
         // Get current pending operations for potential rollback
@@ -305,12 +287,32 @@ function DiagramCanvasInner({
                 rollbackOperation(opId);
             }
         }
-    };
+    }, [diagramId, nodes, edges, setSaving, setSaveSuccess, setSaveError, rollbackOperation]);
 
-    // Manual save trigger
-    const handleManualSave = async () => {
-        await saveDiagram();
-    };
+    // Debounced save function
+    useEffect(() => {
+        // Skip save if no changes or if diagram not initialized
+        if (!hasUnsavedChanges || !initializedRef.current) return;
+        if (nodes.length === 0 && edges.length === 0) return;
+        if (!diagramId) return;
+
+        // Clear existing timeout
+        if (saveTimeoutRef.current) {
+            clearTimeout(saveTimeoutRef.current);
+        }
+
+        // Set new timeout for debounced save
+        saveTimeoutRef.current = setTimeout(() => {
+            saveDiagram();
+        }, 2000); // 2 second debounce
+
+        return () => {
+            if (saveTimeoutRef.current) {
+                clearTimeout(saveTimeoutRef.current);
+            }
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [nodes, edges, hasUnsavedChanges, diagramId]);
 
     // Define custom node types
     const nodeTypes = useMemo(
@@ -405,7 +407,7 @@ function DiagramCanvasInner({
                         {/* Manual save button */}
                         <button
                             type="button"
-                            onClick={handleManualSave}
+                            onClick={saveDiagram}
                             disabled={isSaving}
                             className="px-3 py-1 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 disabled:opacity-50 transition-colors"
                         >

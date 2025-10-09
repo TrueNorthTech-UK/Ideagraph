@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 
 
 
+## [0.1.35] - 2025-10-09
+### Fixed
+- **Critical: Infinite Render Loop**: Fixed React error #185 (Maximum update depth exceeded)
+  - Refactored diagram initialization effect to only depend on `diagramId`
+  - Added `initializedDiagramIdRef` to track which diagram is loaded
+  - Prevented re-initialization with unstable array dependencies (`initialNodes`, `initialEdges`)
+  - Wrapped `saveDiagram` function in `useCallback` to prevent recreation on every render
+  - Optimized save effect dependencies to prevent unnecessary re-renders
+  - Fixed application crash when opening diagram pages
+  - Resolved "Application error: a client-side exception has occurred" error
+
+### Performance
+- **Diagram Canvas Optimization**:
+  - Stabilized effect dependencies to reduce unnecessary re-renders
+  - Improved save debouncing logic with proper cleanup
+  - Added null checks for diagramId before attempting saves
+
 ## [0.1.34] - 2025-10-09
 ### Fixed
 - **React Flow Error**: Fixed "zustand provider as an ancestor" error in diagram canvas
