@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 
 
+## [0.1.14] - 2025-10-09
+### Fixed
+- Cloudflare Pages deployment build process: updated `build` script to include OpenNext transformation step
+- Build script now runs `next build && npx @opennextjs/cloudflare build` to properly generate `.open-next/worker.js` entry point required by Wrangler
+
+### Changed
+- Modified `package.json` build script to support Cloudflare Pages deployment pipeline
+
 ## [0.1.13] - 2025-01-27
 ### Added
 - Environment verification script (`scripts/verify-env.js`) to validate configuration
